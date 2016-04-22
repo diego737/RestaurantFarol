@@ -26,8 +26,8 @@ Partial Class frmesas
         Me.BtnCancelar = New System.Windows.Forms.Button
         Me.Id = New System.Windows.Forms.Label
         Me.Detalle = New System.Windows.Forms.Label
-        Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.TextBox2 = New System.Windows.Forms.TextBox
+        Me.txtid = New System.Windows.Forms.TextBox
+        Me.txtdetalle = New System.Windows.Forms.TextBox
         Me.SuspendLayout()
         '
         'BtnAceptar
@@ -66,27 +66,27 @@ Partial Class frmesas
         Me.Detalle.TabIndex = 3
         Me.Detalle.Text = "Detalle"
         '
-        'TextBox1
+        'txtid
         '
-        Me.TextBox1.Location = New System.Drawing.Point(159, 13)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 4
+        Me.txtid.Location = New System.Drawing.Point(159, 13)
+        Me.txtid.Name = "txtid"
+        Me.txtid.Size = New System.Drawing.Size(100, 20)
+        Me.txtid.TabIndex = 4
         '
-        'TextBox2
+        'txtdetalle
         '
-        Me.TextBox2.Location = New System.Drawing.Point(159, 49)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 5
+        Me.txtdetalle.Location = New System.Drawing.Point(159, 49)
+        Me.txtdetalle.Name = "txtdetalle"
+        Me.txtdetalle.Size = New System.Drawing.Size(100, 20)
+        Me.txtdetalle.TabIndex = 5
         '
         'frmesas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(535, 192)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtdetalle)
+        Me.Controls.Add(Me.txtid)
         Me.Controls.Add(Me.Detalle)
         Me.Controls.Add(Me.Id)
         Me.Controls.Add(Me.BtnCancelar)
@@ -101,6 +101,6 @@ Partial Class frmesas
     Friend WithEvents BtnCancelar As System.Windows.Forms.Button
     Friend WithEvents Id As System.Windows.Forms.Label
     Friend WithEvents Detalle As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtid As System.Windows.Forms.TextBox
+    Friend WithEvents txtdetalle As System.Windows.Forms.TextBox
 End Class
