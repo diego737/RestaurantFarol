@@ -54,8 +54,8 @@ Public Class MesasClass
             ' Dim strComando As String = "INSERT INTO Clientes (nombre,direccion,fechanac,deuda) VALUES (@nombre,@direccion,@fechanac,@deuda)"
             Dim objComando As New SqlCommand("pInsertarMesas", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.Add("@Detalle", SqlDbType.VarChar)
-            objComando.Parameters("@Detalle").Value = mesa.Detalle
+            objComando.Parameters.Add("@detalle", SqlDbType.VarChar)
+            objComando.Parameters("@detalle").Value = mesa.Detalle
 
             'objComando.Parameters.AddWithValue("id", mesa.id)
             'objComando.Parameters.AddWithValue("detalle", mesa.Detalle)
