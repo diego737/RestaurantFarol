@@ -73,6 +73,13 @@
     <Compile Include="frmesas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MesasClass.vb" />
+    <Compile Include="MesasGrid.Designer.vb">
+      <DependentUpon>MesasGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MesasGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PaginaPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +106,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmesas.resx">
       <DependentUpon>frmesas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MesasGrid.resx">
+      <DependentUpon>MesasGrid.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PaginaPrincipal.resx">
       <DependentUpon>PaginaPrincipal.vb</DependentUpon>
