@@ -100,7 +100,7 @@ Public Class MesasClass
             'objComando.Parameters.Add("@id", SqlDbType.Int)
             objComando.Parameters.AddWithValue("id", mesa.id) 'este es con procedimiento almacenado
             'objComando.Parameters.Add("@detalle", SqlDbType.VarChar)
-            objComando.Parameters.AddWithValue("detalle", mesa.id)
+            objComando.Parameters.AddWithValue("detalle", mesa.Detalle)
             'objComando.Parameters("@id").Value = mesa.id
             'objComando.Parameters("@detalle").Value = mesa.Detalle
             

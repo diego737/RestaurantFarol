@@ -7,8 +7,8 @@ Public Class ClienteClass
     Private id_ As Integer
     Private nomyape_ As String
     Private dni_ As String
-    Private direccion_ As Date
-    Private telefono_ As Decimal
+    Private direccion_ As String
+    Private telefono_ As String
 
     Public Property id() As Integer
         Get
@@ -42,11 +42,11 @@ Public Class ClienteClass
             direccion_ = value
         End Set
     End Property
-    Public Property telefono() As Decimal
+    Public Property telefono() As String
         Get
             Return telefono_
         End Get
-        Set(ByVal value As Decimal)
+        Set(ByVal value As String)
             telefono_ = value
         End Set
     End Property

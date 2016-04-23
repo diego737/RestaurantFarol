@@ -22,24 +22,24 @@ Partial Class ClientesGrid
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgvClientes = New System.Windows.Forms.DataGridView
+        Me.ClientesGrid1 = New System.Windows.Forms.DataGridView
         Me.btnSalir = New System.Windows.Forms.Button
         Me.btnBorrar = New System.Windows.Forms.Button
         Me.btnModificar = New System.Windows.Forms.Button
         Me.btnAgregar = New System.Windows.Forms.Button
-        CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClientesGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'dgvClientes
+        'ClientesGrid1
         '
-        Me.dgvClientes.AllowUserToAddRows = False
-        Me.dgvClientes.AllowUserToDeleteRows = False
-        Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvClientes.Location = New System.Drawing.Point(13, 13)
-        Me.dgvClientes.Name = "dgvClientes"
-        Me.dgvClientes.ReadOnly = True
-        Me.dgvClientes.Size = New System.Drawing.Size(725, 380)
-        Me.dgvClientes.TabIndex = 0
+        Me.ClientesGrid1.AllowUserToAddRows = False
+        Me.ClientesGrid1.AllowUserToDeleteRows = False
+        Me.ClientesGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ClientesGrid1.Location = New System.Drawing.Point(13, 13)
+        Me.ClientesGrid1.Name = "ClientesGrid1"
+        Me.ClientesGrid1.ReadOnly = True
+        Me.ClientesGrid1.Size = New System.Drawing.Size(725, 380)
+        Me.ClientesGrid1.TabIndex = 0
         '
         'btnSalir
         '
@@ -86,14 +86,14 @@ Partial Class ClientesGrid
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
-        Me.Controls.Add(Me.dgvClientes)
+        Me.Controls.Add(Me.ClientesGrid1)
         Me.Name = "ClientesGrid"
         Me.Text = "ClientesGrid"
-        CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClientesGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents dgvClientes As System.Windows.Forms.DataGridView
+    Friend WithEvents ClientesGrid1 As System.Windows.Forms.DataGridView
     Friend WithEvents btnSalir As System.Windows.Forms.Button
     Friend WithEvents btnBorrar As System.Windows.Forms.Button
     Friend WithEvents btnModificar As System.Windows.Forms.Button

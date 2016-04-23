@@ -29,6 +29,7 @@ Partial Class PaginaPrincipal
         Me.MesasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.BtnSalir = New System.Windows.Forms.Button
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -51,32 +52,41 @@ Partial Class PaginaPrincipal
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'PersonalToolStripMenuItem
         '
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.PersonalToolStripMenuItem.Text = "Personal"
         '
         'MesasToolStripMenuItem
         '
         Me.MesasToolStripMenuItem.Name = "MesasToolStripMenuItem"
-        Me.MesasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MesasToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.MesasToolStripMenuItem.Text = "Mesas"
         '
         'CategoriasToolStripMenuItem
         '
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.CategoriasToolStripMenuItem.Text = "Categorias"
         '
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
+        '
+        'BtnSalir
+        '
+        Me.BtnSalir.Location = New System.Drawing.Point(690, 0)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(144, 27)
+        Me.BtnSalir.TabIndex = 1
+        Me.BtnSalir.Text = "Salir"
+        Me.BtnSalir.UseVisualStyleBackColor = True
         '
         'PaginaPrincipal
         '
@@ -84,6 +94,7 @@ Partial Class PaginaPrincipal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.ClientSize = New System.Drawing.Size(834, 410)
+        Me.Controls.Add(Me.BtnSalir)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "PaginaPrincipal"
@@ -103,5 +114,6 @@ Partial Class PaginaPrincipal
     Friend WithEvents MesasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CategoriasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BtnSalir As System.Windows.Forms.Button
 
 End Class

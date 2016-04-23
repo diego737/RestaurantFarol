@@ -68,9 +68,11 @@ Partial Class frmesas
         '
         'txtid
         '
+        Me.txtid.Enabled = False
         Me.txtid.Location = New System.Drawing.Point(159, 13)
         Me.txtid.Name = "txtid"
-        Me.txtid.Size = New System.Drawing.Size(100, 20)
+        Me.txtid.ReadOnly = True
+        Me.txtid.Size = New System.Drawing.Size(26, 20)
         Me.txtid.TabIndex = 4
         '
         'txtdetalle

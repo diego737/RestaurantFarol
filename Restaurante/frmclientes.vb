@@ -37,7 +37,7 @@
             cliente.id = txtId.Text
             cliente.Modificar(cliente)
         End If
-        cliente.consultarTodos(ClientesGrid.dgvClientes)
+        cliente.consultarTodos(ClientesGrid.ClientesGrid1)
         Me.Close()
     End Sub
 

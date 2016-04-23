@@ -11,7 +11,7 @@
     Public Sub Modificar()
 
         mesas.id = MesasGrid1.Item("id", MesasGrid1.CurrentRow.Index).Value
-        mesas.Detalle = MesasGrid1.Item("nombre", MesasGrid1.CurrentRow.Index).Value
+        mesas.Detalle = MesasGrid1.Item("detalle", MesasGrid1.CurrentRow.Index).Value
         frmesas.accion = "Modificar"
         frmesas.mesas = mesas
         frmesas.ShowDialog()
@@ -31,5 +31,13 @@
 
     Private Sub BtnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSalir.Click
         Me.Close()
+    End Sub
+
+    Private Sub MesasGrid1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles MesasGrid1.CellContentClick
+
+    End Sub
+
+    Private Sub MesasGrid1_CellContentDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles MesasGrid1.CellContentDoubleClick
+        Modificar()
     End Sub
 End Class

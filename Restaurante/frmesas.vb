@@ -21,7 +21,7 @@
 
     Private Sub frmesas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If accion_ = "Insertar" Then
-            Me.Text = "Agregar Cliente"
+            Me.Text = "Agregar Mesa"
             txtdetalle.Text = ""
           
         Else
@@ -44,6 +44,10 @@
             mesas.Modificar(mesas)
         End If
         mesas.Consultartodos(MesasGrid.MesasGrid1)
+        Me.Close()
+    End Sub
+
+    Private Sub BtnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnCancelar.Click
         Me.Close()
     End Sub
 End Class
