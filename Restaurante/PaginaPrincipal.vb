@@ -26,4 +26,9 @@
         PersonalGrid.Show()
 
     End Sub
+
+    Private Sub CategoriasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CategoriasToolStripMenuItem.Click
+        MenuStrip1.Enabled = False
+        ConsultasGrid.Show()
+    End Sub
 End Class

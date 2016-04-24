@@ -74,6 +74,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="conexion.vb" />
+    <Compile Include="ConsultasGrid.Designer.vb">
+      <DependentUpon>ConsultasGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultasGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcategorias.Designer.vb">
+      <DependentUpon>frmcategorias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmcategorias.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmclientes.Designer.vb">
       <DependentUpon>frmclientes.vb</DependentUpon>
     </Compile>
@@ -132,6 +144,12 @@
   <ItemGroup>
     <EmbeddedResource Include="ClientesGrid.resx">
       <DependentUpon>ClientesGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultasGrid.resx">
+      <DependentUpon>ConsultasGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcategorias.resx">
+      <DependentUpon>frmcategorias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmclientes.resx">
       <DependentUpon>frmclientes.vb</DependentUpon>
