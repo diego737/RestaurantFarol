@@ -10,16 +10,20 @@
 
     End Sub
     Public Sub modificar()
-        clientes.id = ClientesGrid1.Item("id", ClientesGrid1.CurrentRow.Index).Value
-        clientes.nomyape = ClientesGrid1.Item("nomyape", ClientesGrid1.CurrentRow.Index).Value
-        clientes.dni = ClientesGrid1.Item("dni", ClientesGrid1.CurrentRow.Index).Value
-        clientes.direccion = ClientesGrid1.Item("direccion", ClientesGrid1.CurrentRow.Index).Value
-        clientes.telefono = ClientesGrid1.Item("telefono", ClientesGrid1.CurrentRow.Index).Value
-        frmclientes.accion = "Modificar"
-        frmclientes.cliente = clientes
-        frmclientes.ShowDialog()
+        Try
+            clientes.id = ClientesGrid1.Item("id", ClientesGrid1.CurrentRow.Index).Value
+            clientes.nomyape = ClientesGrid1.Item("nomyape", ClientesGrid1.CurrentRow.Index).Value
+            clientes.dni = ClientesGrid1.Item("dni", ClientesGrid1.CurrentRow.Index).Value
+            clientes.direccion = ClientesGrid1.Item("direccion", ClientesGrid1.CurrentRow.Index).Value
+            clientes.telefono = ClientesGrid1.Item("telefono", ClientesGrid1.CurrentRow.Index).Value
+            frmclientes.accion = "Modificar"
+            frmclientes.cliente = clientes
+            frmclientes.ShowDialog()
+        Catch ex As Exception
+            MsgBox("No puede modificar un cliente en blanco")
 
-
+        Finally
+        End Try
     End Sub
 
     Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click
@@ -41,8 +45,13 @@
     Private Sub btnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBorrar.Click
         Dim mensaje As DialogResult = MessageBox.Show("Esta seguro de borrar el Cliente?", "Adveretencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
         If mensaje = Windows.Forms.DialogResult.OK Then
-            clientes.Borrar(ClientesGrid1.Item("id", ClientesGrid1.CurrentRow.Index).Value)
-            clientes.consultarTodos(ClientesGrid1)
+            Try
+                clientes.Borrar(ClientesGrid1.Item("id", ClientesGrid1.CurrentRow.Index).Value)
+                clientes.consultarTodos(ClientesGrid1)
+            Catch ex As Exception
+                MsgBox("Debe seleccionar un cliente")
+            Finally
+            End Try
         End If
     End Sub
 End Class

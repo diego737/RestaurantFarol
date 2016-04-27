@@ -41,7 +41,7 @@ Partial Class frmclientes
         Me.btnCancelar.Location = New System.Drawing.Point(205, 158)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 24
+        Me.btnCancelar.TabIndex = 18
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
@@ -50,7 +50,7 @@ Partial Class frmclientes
         Me.btnAceptar.Location = New System.Drawing.Point(124, 158)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 23
+        Me.btnAceptar.TabIndex = 18
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
@@ -104,14 +104,14 @@ Partial Class frmclientes
         Me.txtTelefono.Location = New System.Drawing.Point(117, 119)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(82, 20)
-        Me.txtTelefono.TabIndex = 16
+        Me.txtTelefono.TabIndex = 17
         '
         'txtDireccion
         '
         Me.txtDireccion.Location = New System.Drawing.Point(117, 93)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(267, 20)
-        Me.txtDireccion.TabIndex = 15
+        Me.txtDireccion.TabIndex = 16
         '
         'txtNomyape
         '
@@ -134,7 +134,7 @@ Partial Class frmclientes
         Me.txtDni.Location = New System.Drawing.Point(117, 64)
         Me.txtDni.Name = "txtDni"
         Me.txtDni.Size = New System.Drawing.Size(267, 20)
-        Me.txtDni.TabIndex = 25
+        Me.txtDni.TabIndex = 15
         '
         'frmclientes
         '
