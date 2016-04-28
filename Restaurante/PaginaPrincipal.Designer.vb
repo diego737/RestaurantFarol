@@ -51,31 +51,31 @@ Partial Class PaginaPrincipal
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'PersonalToolStripMenuItem
         '
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PersonalToolStripMenuItem.Text = "Personal"
         '
         'MesasToolStripMenuItem
         '
         Me.MesasToolStripMenuItem.Name = "MesasToolStripMenuItem"
-        Me.MesasToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.MesasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.MesasToolStripMenuItem.Text = "Mesas"
         '
         'CategoriasToolStripMenuItem
         '
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CategoriasToolStripMenuItem.Text = "Categorias"
         '
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'PaginaPrincipal

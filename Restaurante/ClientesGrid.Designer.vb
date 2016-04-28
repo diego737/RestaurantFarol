@@ -34,11 +34,13 @@ Partial Class ClientesGrid
         '
         Me.ClientesGrid1.AllowUserToAddRows = False
         Me.ClientesGrid1.AllowUserToDeleteRows = False
+        Me.ClientesGrid1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ClientesGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClientesGrid1.Location = New System.Drawing.Point(13, 13)
         Me.ClientesGrid1.Name = "ClientesGrid1"
         Me.ClientesGrid1.ReadOnly = True
-        Me.ClientesGrid1.Size = New System.Drawing.Size(725, 380)
+        Me.ClientesGrid1.Size = New System.Drawing.Size(959, 380)
         Me.ClientesGrid1.TabIndex = 0
         '
         'btnSalir
@@ -81,13 +83,14 @@ Partial Class ClientesGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(750, 516)
+        Me.ClientSize = New System.Drawing.Size(984, 441)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.ClientesGrid1)
         Me.Name = "ClientesGrid"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ClientesGrid"
         CType(Me.ClientesGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

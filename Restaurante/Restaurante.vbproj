@@ -104,6 +104,12 @@
     <Compile Include="frmpersonal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmproveedores.Designer.vb">
+      <DependentUpon>frmproveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmproveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MesasClass.vb" />
     <Compile Include="MesasGrid.Designer.vb">
       <DependentUpon>MesasGrid.vb</DependentUpon>
@@ -140,6 +146,13 @@
     <Compile Include="PersonalGrid.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ProveedoresClass.vb" />
+    <Compile Include="ProveedoresGrid.Designer.vb">
+      <DependentUpon>ProveedoresGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedoresGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ClientesGrid.resx">
@@ -160,6 +173,9 @@
     <EmbeddedResource Include="frmpersonal.resx">
       <DependentUpon>frmpersonal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmproveedores.resx">
+      <DependentUpon>frmproveedores.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MesasGrid.resx">
       <DependentUpon>MesasGrid.vb</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonalGrid.resx">
       <DependentUpon>PersonalGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProveedoresGrid.resx">
+      <DependentUpon>ProveedoresGrid.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

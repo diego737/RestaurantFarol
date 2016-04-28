@@ -23,4 +23,9 @@
     Private Sub PaginaPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MenuStrip1.Enabled = True
     End Sub
+
+    Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem.Click
+        MenuStrip1.Enabled = True
+        ProveedoresGrid.ShowDialog()
+    End Sub
 End Class
