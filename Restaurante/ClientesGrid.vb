@@ -30,9 +30,6 @@
         modificar()
     End Sub
 
-    Private Sub ClientesGrid1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ClientesGrid1.CellContentClick
-
-    End Sub
 
     Private Sub ClientesGrid1_CellContentDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ClientesGrid1.CellContentDoubleClick
         modificar()

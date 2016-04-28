@@ -28,8 +28,8 @@ Partial Class frmcategorias
         Me.txtid = New System.Windows.Forms.TextBox
         Me.txtdescripcion = New System.Windows.Forms.TextBox
         Me.Label2 = New System.Windows.Forms.Label
-        Me.Picboximagen = New System.Windows.Forms.PictureBox
-        CType(Me.Picboximagen, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.imagencategorias = New System.Windows.Forms.PictureBox
+        CType(Me.imagencategorias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnAceptar
@@ -82,20 +82,20 @@ Partial Class frmcategorias
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Descripcion"
         '
-        'Picboximagen
+        'imagencategorias
         '
-        Me.Picboximagen.Location = New System.Drawing.Point(294, 107)
-        Me.Picboximagen.Name = "Picboximagen"
-        Me.Picboximagen.Size = New System.Drawing.Size(100, 43)
-        Me.Picboximagen.TabIndex = 7
-        Me.Picboximagen.TabStop = False
+        Me.imagencategorias.Location = New System.Drawing.Point(294, 107)
+        Me.imagencategorias.Name = "imagencategorias"
+        Me.imagencategorias.Size = New System.Drawing.Size(100, 43)
+        Me.imagencategorias.TabIndex = 7
+        Me.imagencategorias.TabStop = False
         '
         'frmcategorias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(604, 258)
-        Me.Controls.Add(Me.Picboximagen)
+        Me.Controls.Add(Me.imagencategorias)
         Me.Controls.Add(Me.txtdescripcion)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtid)
@@ -104,7 +104,7 @@ Partial Class frmcategorias
         Me.Controls.Add(Me.BtnAceptar)
         Me.Name = "frmcategorias"
         Me.Text = "frmcategorias"
-        CType(Me.Picboximagen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imagencategorias, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -115,5 +115,5 @@ Partial Class frmcategorias
     Friend WithEvents txtid As System.Windows.Forms.TextBox
     Friend WithEvents txtdescripcion As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Picboximagen As System.Windows.Forms.PictureBox
+    Friend WithEvents imagencategorias As System.Windows.Forms.PictureBox
 End Class

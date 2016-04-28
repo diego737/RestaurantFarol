@@ -17,7 +17,7 @@
 
     Private Sub CategoriasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CategoriasToolStripMenuItem.Click
         MenuStrip1.Enabled = True
-        ConsultasGrid.ShowDialog()
+        CategoriasGrid.ShowDialog()
     End Sub
 
     Private Sub PaginaPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
