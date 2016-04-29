@@ -61,6 +61,7 @@ Partial Class frmcategorias
         '
         'txtid
         '
+        Me.txtid.Enabled = False
         Me.txtid.Location = New System.Drawing.Point(177, 35)
         Me.txtid.Name = "txtid"
         Me.txtid.Size = New System.Drawing.Size(100, 20)
