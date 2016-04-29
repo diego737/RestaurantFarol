@@ -34,10 +34,11 @@ Partial Class PaginaPrincipal
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.AutoSize = False
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RestauranteToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(834, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(834, 58)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -45,37 +46,37 @@ Partial Class PaginaPrincipal
         '
         Me.RestauranteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProveedoresToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.MesasToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.ClientesToolStripMenuItem})
         Me.RestauranteToolStripMenuItem.Name = "RestauranteToolStripMenuItem"
-        Me.RestauranteToolStripMenuItem.Size = New System.Drawing.Size(81, 20)
+        Me.RestauranteToolStripMenuItem.Size = New System.Drawing.Size(81, 54)
         Me.RestauranteToolStripMenuItem.Text = "Restaurante"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'PersonalToolStripMenuItem
         '
         Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.PersonalToolStripMenuItem.Text = "Personal"
         '
         'MesasToolStripMenuItem
         '
         Me.MesasToolStripMenuItem.Name = "MesasToolStripMenuItem"
-        Me.MesasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MesasToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.MesasToolStripMenuItem.Text = "Mesas"
         '
         'CategoriasToolStripMenuItem
         '
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.CategoriasToolStripMenuItem.Text = "Categorias"
         '
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'PaginaPrincipal
@@ -93,7 +94,6 @@ Partial Class PaginaPrincipal
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
