@@ -15,13 +15,17 @@
     End Sub
 
     Public Sub Modificar()
-        categorias.id = CategoriasGrid1.Item("id", CategoriasGrid1.CurrentRow.Index).Value
-        categorias.descripcion = CategoriasGrid1.Item("descripcion", CategoriasGrid1.CurrentRow.Index).Value
-        
-        frmcategorias.accion = "Modificar"
-        frmcategorias.categoria = categorias
-        frmcategorias.ShowDialog()
+        Try
+            categorias.id = CategoriasGrid1.Item("id", CategoriasGrid1.CurrentRow.Index).Value
+            categorias.descripcion = CategoriasGrid1.Item("descripcion", CategoriasGrid1.CurrentRow.Index).Value
 
+            frmcategorias.accion = "Modificar"
+            frmcategorias.categoria = categorias
+            frmcategorias.ShowDialog()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+        End Try
     End Sub
     Private Sub BtnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnModificar.Click
         Modificar()
@@ -33,10 +37,15 @@
     End Sub
 
     Private Sub BtnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnBorrar.Click
-        Dim mensaje As DialogResult = MessageBox.Show("Esta seguro de borrar la Categoria?", "Adveretencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-        If mensaje = Windows.Forms.DialogResult.OK Then
-            categorias.Borrar(CategoriasGrid1.Item("id", CategoriasGrid1.CurrentRow.Index).Value)
-            categorias.consultarTodos(CategoriasGrid1)
-        End If
+        Try
+            Dim mensaje As DialogResult = MessageBox.Show("Esta seguro de borrar la Categoria?", "Adveretencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            If mensaje = Windows.Forms.DialogResult.OK Then
+                categorias.Borrar(CategoriasGrid1.Item("id", CategoriasGrid1.CurrentRow.Index).Value)
+                categorias.consultarTodos(CategoriasGrid1)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+        End Try
     End Sub
 End Class

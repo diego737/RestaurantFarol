@@ -14,12 +14,17 @@
         frmpersonal.ShowDialog()
     End Sub
     Public Sub modificar()
-        personal.id = Personalgrid1.Item("id", Personalgrid1.CurrentRow.Index).Value
-        personal.nomyape = Personalgrid1.Item("nomyape", Personalgrid1.CurrentRow.Index).Value
-        personal.tarea = Personalgrid1.Item("tarea", Personalgrid1.CurrentRow.Index).Value
-        frmpersonal.accion = "Modificar"
-        frmpersonal.personal = personal
-        frmpersonal.ShowDialog()
+        Try
+            personal.id = Personalgrid1.Item("id", Personalgrid1.CurrentRow.Index).Value
+            personal.nomyape = Personalgrid1.Item("nomyape", Personalgrid1.CurrentRow.Index).Value
+            personal.tarea = Personalgrid1.Item("tarea", Personalgrid1.CurrentRow.Index).Value
+            frmpersonal.accion = "Modificar"
+            frmpersonal.personal = personal
+            frmpersonal.ShowDialog()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+        End Try
     End Sub
 
     Private Sub BtnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnModificar.Click
@@ -32,11 +37,16 @@
     End Sub
 
     Private Sub BtnBorrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnBorrar.Click
-        Dim mensaje As DialogResult = MessageBox.Show(" Está seguro de borrar a la Persona?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-        If mensaje = Windows.Forms.DialogResult.OK Then
-            personal.Borrar(Personalgrid1.Item("id", Personalgrid1.CurrentRow.Index).Value)
-            personal.ConsultarPersonal(Personalgrid1)
-        End If
+        Try
+            Dim mensaje As DialogResult = MessageBox.Show(" Está seguro de borrar a la Persona?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+            If mensaje = Windows.Forms.DialogResult.OK Then
+                personal.Borrar(Personalgrid1.Item("id", Personalgrid1.CurrentRow.Index).Value)
+                personal.ConsultarPersonal(Personalgrid1)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+        End Try
     End Sub
 
     Private Sub BtnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnSalir.Click

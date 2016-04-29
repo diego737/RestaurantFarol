@@ -31,6 +31,10 @@ Partial Class CategoriasGrid
         '
         'CategoriasGrid1
         '
+        Me.CategoriasGrid1.AllowUserToAddRows = False
+        Me.CategoriasGrid1.AllowUserToDeleteRows = False
+        Me.CategoriasGrid1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CategoriasGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.CategoriasGrid1.Location = New System.Drawing.Point(12, 12)
         Me.CategoriasGrid1.Name = "CategoriasGrid1"
