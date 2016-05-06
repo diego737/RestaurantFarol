@@ -1,5 +1,6 @@
 ﻿Public Class ClientesGrid
     Dim clientes As New ClienteClass
+
     Private Sub ClientesGrid_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         clientes.consultarTodos(ClientesGrid1)
     End Sub
@@ -50,5 +51,10 @@
             Finally
             End Try
         End If
+    End Sub
+
+    Private Sub Txt_buscarpornombre_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Txt_buscarpornombre.TextChanged
+
+
     End Sub
 End Class

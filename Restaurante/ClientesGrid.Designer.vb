@@ -27,6 +27,8 @@ Partial Class ClientesGrid
         Me.btnBorrar = New System.Windows.Forms.Button
         Me.btnModificar = New System.Windows.Forms.Button
         Me.btnAgregar = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Txt_buscarpornombre = New System.Windows.Forms.TextBox
         CType(Me.ClientesGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,7 +47,7 @@ Partial Class ClientesGrid
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(596, 399)
+        Me.btnSalir.Location = New System.Drawing.Point(767, 398)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(142, 23)
         Me.btnSalir.TabIndex = 8
@@ -79,11 +81,29 @@ Partial Class ClientesGrid
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(345, 408)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(98, 13)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "Buscar por Nombre"
+        '
+        'Txt_buscarpornombre
+        '
+        Me.Txt_buscarpornombre.Location = New System.Drawing.Point(449, 405)
+        Me.Txt_buscarpornombre.Name = "Txt_buscarpornombre"
+        Me.Txt_buscarpornombre.Size = New System.Drawing.Size(223, 20)
+        Me.Txt_buscarpornombre.TabIndex = 10
+        '
         'ClientesGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 441)
+        Me.Controls.Add(Me.Txt_buscarpornombre)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnModificar)
@@ -94,6 +114,7 @@ Partial Class ClientesGrid
         Me.Text = "ClientesGrid"
         CType(Me.ClientesGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ClientesGrid1 As System.Windows.Forms.DataGridView
@@ -101,4 +122,6 @@ Partial Class ClientesGrid
     Friend WithEvents btnBorrar As System.Windows.Forms.Button
     Friend WithEvents btnModificar As System.Windows.Forms.Button
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Txt_buscarpornombre As System.Windows.Forms.TextBox
 End Class
