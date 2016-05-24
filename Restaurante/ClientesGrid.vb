@@ -1,6 +1,9 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Data
+Imports System.Data.SqlClient
+
 
 Public Class ClientesGrid
+
 
     Dim clientes As New ClienteClass
 
@@ -20,6 +23,7 @@ Public Class ClientesGrid
             clientes.dni = ClientesGrid1.Item("dni", ClientesGrid1.CurrentRow.Index).Value
             clientes.direccion = ClientesGrid1.Item("direccion", ClientesGrid1.CurrentRow.Index).Value
             clientes.telefono = ClientesGrid1.Item("telefono", ClientesGrid1.CurrentRow.Index).Value
+            clientes.IdProvincia = ClientesGrid1.Item("IdProvincia", ClientesGrid1.CurrentRow.Index).Value
             frmclientes.accion = "Modificar"
             frmclientes.cliente = clientes
             frmclientes.ShowDialog()
@@ -57,7 +61,13 @@ Public Class ClientesGrid
     End Sub
 
     Private Sub Txt_buscarpornombre_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Txt_buscarpornombre.TextChanged
+        'Dim Conexion As New Conexion
+        'Dim buscar As New SqlDataAdapter("select * from Clientes  where nombyape like '&" + Txt_buscarpornombre.Text + "%'", Conexion.objConexion)
+        'Dim ds As New DataSet()
+        'buscar.Fill(ds, "Clientes")
+        'ClientesGrid1.DataSource = ds.Tables(0)
 
+       
 
 
 

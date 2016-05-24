@@ -9,6 +9,7 @@ Public Class ClienteClass
     Private dni_ As String
     Private direccion_ As String
     Private telefono_ As String
+    Private IdProvincia_ As Integer
 
     Public Property id() As Integer
         Get
@@ -50,6 +51,14 @@ Public Class ClienteClass
             telefono_ = value
         End Set
     End Property
+    Public Property IdProvincia() As Integer
+        Get
+            Return IdProvincia_
+        End Get
+        Set(ByVal value As Integer)
+            IdProvincia_ = value
+        End Set
+    End Property
 
     Public Sub consultarTodos(ByVal tabla As DataGridView)
 
@@ -82,7 +91,7 @@ Public Class ClienteClass
             objComando.Parameters.AddWithValue("dni", cliente.dni)
             objComando.Parameters.AddWithValue("direccion", cliente.direccion)
             objComando.Parameters.AddWithValue("telefono", cliente.telefono)
-
+            objComando.Parameters.AddWithValue("IdProvincia", cliente.IdProvincia)
             objComando.ExecuteNonQuery()
 
         Catch ex As Exception
@@ -104,7 +113,7 @@ Public Class ClienteClass
             objComando.Parameters.AddWithValue("dni", cliente.dni)
             objComando.Parameters.AddWithValue("direccion", cliente.direccion)
             objComando.Parameters.AddWithValue("telefono", cliente.telefono)
-
+            objComando.Parameters.AddWithValue("IdProvincia", cliente.IdProvincia)
             objComando.ExecuteNonQuery()
 
         Catch ex As Exception

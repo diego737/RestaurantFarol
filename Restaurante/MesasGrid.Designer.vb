@@ -22,6 +22,7 @@ Partial Class MesasGrid
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MesasGrid))
         Me.MesasGrid1 = New System.Windows.Forms.DataGridView
         Me.BtnAgregar = New System.Windows.Forms.Button
         Me.BtnModificar = New System.Windows.Forms.Button
@@ -33,43 +34,59 @@ Partial Class MesasGrid
         'MesasGrid1
         '
         Me.MesasGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.MesasGrid1.Location = New System.Drawing.Point(12, 28)
+        Me.MesasGrid1.Location = New System.Drawing.Point(119, 12)
         Me.MesasGrid1.Name = "MesasGrid1"
-        Me.MesasGrid1.Size = New System.Drawing.Size(656, 401)
+        Me.MesasGrid1.Size = New System.Drawing.Size(281, 505)
         Me.MesasGrid1.TabIndex = 0
         '
         'BtnAgregar
         '
-        Me.BtnAgregar.Location = New System.Drawing.Point(12, 451)
+        Me.BtnAgregar.BackgroundImage = CType(resources.GetObject("BtnAgregar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BtnAgregar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregar.ForeColor = System.Drawing.Color.White
+        Me.BtnAgregar.Location = New System.Drawing.Point(12, 37)
         Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(129, 48)
+        Me.BtnAgregar.Size = New System.Drawing.Size(101, 43)
         Me.BtnAgregar.TabIndex = 1
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'BtnModificar
         '
-        Me.BtnModificar.Location = New System.Drawing.Point(166, 451)
+        Me.BtnModificar.BackgroundImage = CType(resources.GetObject("BtnModificar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnModificar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BtnModificar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.ForeColor = System.Drawing.Color.White
+        Me.BtnModificar.Location = New System.Drawing.Point(12, 105)
         Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(129, 48)
+        Me.BtnModificar.Size = New System.Drawing.Size(101, 43)
         Me.BtnModificar.TabIndex = 2
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = True
         '
         'BtnBorrar
         '
-        Me.BtnBorrar.Location = New System.Drawing.Point(316, 451)
+        Me.BtnBorrar.BackgroundImage = CType(resources.GetObject("BtnBorrar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BtnBorrar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBorrar.ForeColor = System.Drawing.Color.White
+        Me.BtnBorrar.Location = New System.Drawing.Point(12, 176)
         Me.BtnBorrar.Name = "BtnBorrar"
-        Me.BtnBorrar.Size = New System.Drawing.Size(129, 48)
+        Me.BtnBorrar.Size = New System.Drawing.Size(101, 43)
         Me.BtnBorrar.TabIndex = 3
         Me.BtnBorrar.Text = "Borrar"
         Me.BtnBorrar.UseVisualStyleBackColor = True
         '
         'BtnSalir
         '
-        Me.BtnSalir.Location = New System.Drawing.Point(552, 451)
+        Me.BtnSalir.BackgroundImage = CType(resources.GetObject("BtnSalir.BackgroundImage"), System.Drawing.Image)
+        Me.BtnSalir.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BtnSalir.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.ForeColor = System.Drawing.Color.White
+        Me.BtnSalir.Location = New System.Drawing.Point(12, 474)
         Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(129, 48)
+        Me.BtnSalir.Size = New System.Drawing.Size(101, 43)
         Me.BtnSalir.TabIndex = 4
         Me.BtnSalir.Text = "Salir"
         Me.BtnSalir.UseVisualStyleBackColor = True
@@ -78,7 +95,9 @@ Partial Class MesasGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(693, 529)
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.barrarestaurante
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(439, 529)
         Me.Controls.Add(Me.BtnSalir)
         Me.Controls.Add(Me.BtnBorrar)
         Me.Controls.Add(Me.BtnModificar)

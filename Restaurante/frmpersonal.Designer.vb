@@ -22,6 +22,7 @@ Partial Class frmpersonal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmpersonal))
         Me.BtnAceptar = New System.Windows.Forms.Button
         Me.BtnCancelar = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
@@ -34,18 +35,24 @@ Partial Class frmpersonal
         '
         'BtnAceptar
         '
-        Me.BtnAceptar.Location = New System.Drawing.Point(70, 230)
+        Me.BtnAceptar.BackgroundImage = CType(resources.GetObject("BtnAceptar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnAceptar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAceptar.ForeColor = System.Drawing.Color.White
+        Me.BtnAceptar.Location = New System.Drawing.Point(105, 199)
         Me.BtnAceptar.Name = "BtnAceptar"
-        Me.BtnAceptar.Size = New System.Drawing.Size(121, 52)
+        Me.BtnAceptar.Size = New System.Drawing.Size(101, 43)
         Me.BtnAceptar.TabIndex = 0
         Me.BtnAceptar.Text = "Aceptar"
         Me.BtnAceptar.UseVisualStyleBackColor = True
         '
         'BtnCancelar
         '
-        Me.BtnCancelar.Location = New System.Drawing.Point(223, 230)
+        Me.BtnCancelar.BackgroundImage = CType(resources.GetObject("BtnCancelar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnCancelar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCancelar.ForeColor = System.Drawing.Color.White
+        Me.BtnCancelar.Location = New System.Drawing.Point(239, 199)
         Me.BtnCancelar.Name = "BtnCancelar"
-        Me.BtnCancelar.Size = New System.Drawing.Size(121, 52)
+        Me.BtnCancelar.Size = New System.Drawing.Size(101, 43)
         Me.BtnCancelar.TabIndex = 1
         Me.BtnCancelar.Text = "Cancelar"
         Me.BtnCancelar.UseVisualStyleBackColor = True
@@ -53,57 +60,74 @@ Partial Class frmpersonal
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(60, 37)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(24, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(16, 13)
+        Me.Label1.Size = New System.Drawing.Size(25, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Id"
         '
         'txtid
         '
         Me.txtid.Enabled = False
-        Me.txtid.Location = New System.Drawing.Point(125, 37)
+        Me.txtid.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtid.Location = New System.Drawing.Point(58, 6)
+        Me.txtid.Multiline = True
         Me.txtid.Name = "txtid"
-        Me.txtid.Size = New System.Drawing.Size(36, 20)
+        Me.txtid.Size = New System.Drawing.Size(36, 32)
         Me.txtid.TabIndex = 3
         '
         'txtnomyape
         '
-        Me.txtnomyape.Location = New System.Drawing.Point(125, 84)
+        Me.txtnomyape.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtnomyape.Location = New System.Drawing.Point(169, 64)
+        Me.txtnomyape.Multiline = True
         Me.txtnomyape.Name = "txtnomyape"
-        Me.txtnomyape.Size = New System.Drawing.Size(100, 20)
+        Me.txtnomyape.Size = New System.Drawing.Size(262, 29)
         Me.txtnomyape.TabIndex = 5
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 84)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(6, 73)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 13)
+        Me.Label2.Size = New System.Drawing.Size(157, 20)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Nombre y Apellido"
+        Me.Label2.Text = "Nombre y Apellido:"
         '
         'txttarea
         '
-        Me.txttarea.Location = New System.Drawing.Point(125, 126)
+        Me.txttarea.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txttarea.Location = New System.Drawing.Point(169, 115)
+        Me.txttarea.Multiline = True
         Me.txttarea.Name = "txttarea"
-        Me.txttarea.Size = New System.Drawing.Size(100, 20)
+        Me.txttarea.Size = New System.Drawing.Size(262, 31)
         Me.txttarea.TabIndex = 7
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(60, 126)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(54, 126)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(35, 13)
+        Me.Label3.Size = New System.Drawing.Size(55, 20)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Tarea"
+        Me.Label3.Text = "Tarea:"
         '
         'frmpersonal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(532, 294)
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.background_1
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(449, 272)
         Me.Controls.Add(Me.txttarea)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtnomyape)
@@ -112,7 +136,9 @@ Partial Class frmpersonal
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnAceptar)
+        Me.MinimumSize = New System.Drawing.Size(465, 310)
         Me.Name = "frmpersonal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmpersonal"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -26,10 +26,12 @@
     End Sub
 
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+
         cliente.nomyape = txtNomyape.Text
         cliente.dni = txtDni.Text
         cliente.direccion = txtDireccion.Text
         cliente.telefono = txtTelefono.Text
+        cliente.IdProvincia = ComboBoxProvincias.SelectedIndex
 
         If accion_ = "Insertar" Then
             cliente.Insertar(cliente)
@@ -42,12 +44,16 @@
     End Sub
 
     Private Sub frmclientes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Dim provincias As New ProvinciasClass
+        provincias.CargarComboProvincias(ComboBoxProvincias)
         If accion_ = "Insertar" Then
             Me.Text = "Agregar Cliente"
             txtNomyape.Text = ""
             txtDni.Text = ""
             txtDireccion.Text = ""
             txtTelefono.Text = ""
+            ComboBoxProvincias.SelectedItem = ""
+
         Else
             Me.Text = "Modificar Cliente"
             txtId.Text = cliente.id
@@ -55,6 +61,7 @@
             txtDni.Text = cliente.dni
             txtDireccion.Text = cliente.direccion
             txtTelefono.Text = cliente.telefono
+            ComboBoxProvincias.SelectedItem = cliente.IdProvincia
         End If
     End Sub
 End Class

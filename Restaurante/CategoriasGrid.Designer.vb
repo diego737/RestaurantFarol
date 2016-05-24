@@ -22,6 +22,7 @@ Partial Class CategoriasGrid
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CategoriasGrid))
         Me.CategoriasGrid1 = New System.Windows.Forms.DataGridView
         Me.BtnAgregar = New System.Windows.Forms.Button
         Me.BtnModificar = New System.Windows.Forms.Button
@@ -36,34 +37,46 @@ Partial Class CategoriasGrid
         Me.CategoriasGrid1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CategoriasGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CategoriasGrid1.Location = New System.Drawing.Point(12, 12)
+        Me.CategoriasGrid1.Location = New System.Drawing.Point(119, 12)
         Me.CategoriasGrid1.Name = "CategoriasGrid1"
-        Me.CategoriasGrid1.Size = New System.Drawing.Size(681, 428)
+        Me.CategoriasGrid1.Size = New System.Drawing.Size(369, 466)
         Me.CategoriasGrid1.TabIndex = 0
         '
         'BtnAgregar
         '
-        Me.BtnAgregar.Location = New System.Drawing.Point(21, 446)
+        Me.BtnAgregar.BackgroundImage = CType(resources.GetObject("BtnAgregar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BtnAgregar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAgregar.ForeColor = System.Drawing.Color.White
+        Me.BtnAgregar.Location = New System.Drawing.Point(12, 34)
         Me.BtnAgregar.Name = "BtnAgregar"
-        Me.BtnAgregar.Size = New System.Drawing.Size(134, 32)
+        Me.BtnAgregar.Size = New System.Drawing.Size(101, 43)
         Me.BtnAgregar.TabIndex = 1
         Me.BtnAgregar.Text = "Agregar"
         Me.BtnAgregar.UseVisualStyleBackColor = True
         '
         'BtnModificar
         '
-        Me.BtnModificar.Location = New System.Drawing.Point(161, 446)
+        Me.BtnModificar.BackgroundImage = CType(resources.GetObject("BtnModificar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnModificar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BtnModificar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.ForeColor = System.Drawing.Color.White
+        Me.BtnModificar.Location = New System.Drawing.Point(12, 97)
         Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(134, 32)
+        Me.BtnModificar.Size = New System.Drawing.Size(101, 43)
         Me.BtnModificar.TabIndex = 2
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = True
         '
         'BtnBorrar
         '
-        Me.BtnBorrar.Location = New System.Drawing.Point(301, 446)
+        Me.BtnBorrar.BackgroundImage = CType(resources.GetObject("BtnBorrar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BtnBorrar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnBorrar.ForeColor = System.Drawing.Color.White
+        Me.BtnBorrar.Location = New System.Drawing.Point(12, 161)
         Me.BtnBorrar.Name = "BtnBorrar"
-        Me.BtnBorrar.Size = New System.Drawing.Size(134, 32)
+        Me.BtnBorrar.Size = New System.Drawing.Size(101, 43)
         Me.BtnBorrar.TabIndex = 3
         Me.BtnBorrar.Text = "Borrar"
         Me.BtnBorrar.UseVisualStyleBackColor = True
@@ -72,7 +85,9 @@ Partial Class CategoriasGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(705, 490)
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.barrarestaurante
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(511, 485)
         Me.Controls.Add(Me.BtnBorrar)
         Me.Controls.Add(Me.BtnModificar)
         Me.Controls.Add(Me.BtnAgregar)
