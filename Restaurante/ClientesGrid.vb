@@ -61,11 +61,14 @@ Public Class ClientesGrid
     End Sub
 
     Private Sub Txt_buscarpornombre_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Txt_buscarpornombre.TextChanged
-        'Dim Conexion As New Conexion
-        'Dim buscar As New SqlDataAdapter("select * from Clientes  where nombyape like '&" + Txt_buscarpornombre.Text + "%'", Conexion.objConexion)
-        'Dim ds As New DataSet()
-        'buscar.Fill(ds, "Clientes")
-        'ClientesGrid1.DataSource = ds.Tables(0)
+        Dim Conexion As String = "Data Source= DIEGO-PC\SQLEXPRESS;Database= Restaurante; Integrated Security=sspi"
+        Dim objconexion As New SqlConnection(Conexion)
+
+
+        Dim buscar As New SqlDataAdapter("select * from Clientes  where nomyape like '" + Txt_buscarpornombre.Text + "%'", objconexion)
+        Dim ds As New DataSet()
+        buscar.Fill(ds, "Clientes")
+        ClientesGrid1.DataSource = ds.Tables(0)
 
        
 
