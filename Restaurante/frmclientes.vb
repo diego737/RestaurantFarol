@@ -31,7 +31,7 @@
         cliente.dni = txtDni.Text
         cliente.direccion = txtDireccion.Text
         cliente.telefono = txtTelefono.Text
-        cliente.IdProvincia = ComboBoxProvincias.SelectedIndex
+        cliente.IdProvincia = ComboBoxProvincias.SelectedValue
 
         If accion_ = "Insertar" Then
             cliente.Insertar(cliente)
@@ -61,7 +61,7 @@
             txtDni.Text = cliente.dni
             txtDireccion.Text = cliente.direccion
             txtTelefono.Text = cliente.telefono
-            ComboBoxProvincias.SelectedItem = cliente.IdProvincia
+            ComboBoxProvincias.SelectedValue = cliente.IdProvincia
         End If
     End Sub
 End Class

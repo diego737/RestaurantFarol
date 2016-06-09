@@ -65,13 +65,15 @@ Public Class ClienteClass
         Try
             Abrir()
 
-            Dim objComando As New SqlCommand("pConsultarClientes", objConexion)
+            Dim objComando As New SqlCommand("pConsultaClientes", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             Dim objDataTable As New Data.DataTable
             Dim objDataAdapter As New SqlDataAdapter(objComando)
 
             objDataAdapter.Fill(objDataTable)
             tabla.DataSource = objDataTable
+            tabla.Columns("IdProvincia").Visible = False
+
 
         Catch ex As Exception
             MsgBox(ex.Message)

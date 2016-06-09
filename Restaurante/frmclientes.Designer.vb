@@ -173,6 +173,7 @@ Partial Class frmclientes
         '
         'ComboBoxProvincias
         '
+        Me.ComboBoxProvincias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxProvincias.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBoxProvincias.FormattingEnabled = True
         Me.ComboBoxProvincias.Location = New System.Drawing.Point(117, 289)
