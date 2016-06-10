@@ -29,6 +29,7 @@ Partial Class PaginaPrincipal
         Me.MesasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.AtencionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -37,7 +38,7 @@ Partial Class PaginaPrincipal
         Me.MenuStrip1.AutoSize = False
         Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
         Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RestauranteToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RestauranteToolStripMenuItem, Me.AtencionToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(834, 44)
@@ -95,6 +96,12 @@ Partial Class PaginaPrincipal
         Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
+        'AtencionToolStripMenuItem
+        '
+        Me.AtencionToolStripMenuItem.Name = "AtencionToolStripMenuItem"
+        Me.AtencionToolStripMenuItem.Size = New System.Drawing.Size(67, 40)
+        Me.AtencionToolStripMenuItem.Text = "Atencion"
+        '
         'PaginaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -121,5 +128,6 @@ Partial Class PaginaPrincipal
     Friend WithEvents MesasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CategoriasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AtencionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

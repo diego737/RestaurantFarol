@@ -66,6 +66,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtencionForm.Designer.vb">
+      <DependentUpon>AtencionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AtencionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CategoriasClass.vb" />
     <Compile Include="CategoriasGrid.Designer.vb">
       <DependentUpon>CategoriasGrid.vb</DependentUpon>
@@ -85,6 +91,12 @@
       <DependentUpon>ConsultasGrid.vb</DependentUpon>
     </Compile>
     <Compile Include="ConsultasGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaForm.Designer.vb">
+      <DependentUpon>FacturaForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmcategorias.Designer.vb">
@@ -163,6 +175,9 @@
     <Compile Include="ProvinciasClass.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AtencionForm.resx">
+      <DependentUpon>AtencionForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoriasGrid.resx">
       <DependentUpon>CategoriasGrid.vb</DependentUpon>
     </EmbeddedResource>

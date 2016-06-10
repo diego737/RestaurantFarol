@@ -28,4 +28,9 @@
         MenuStrip1.Enabled = True
         ProveedoresGrid.ShowDialog()
     End Sub
+
+    Private Sub AtencionToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AtencionToolStripMenuItem.Click
+        MenuStrip1.Enabled = True
+        AtencionForm.ShowDialog()
+    End Sub
 End Class
