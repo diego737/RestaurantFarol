@@ -98,8 +98,12 @@ Partial Class PaginaPrincipal
         '
         'AtencionToolStripMenuItem
         '
+        Me.AtencionToolStripMenuItem.BackColor = System.Drawing.Color.Transparent
+        Me.AtencionToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.barrarestaurante
+        Me.AtencionToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AtencionToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.AtencionToolStripMenuItem.Name = "AtencionToolStripMenuItem"
-        Me.AtencionToolStripMenuItem.Size = New System.Drawing.Size(67, 40)
+        Me.AtencionToolStripMenuItem.Size = New System.Drawing.Size(109, 40)
         Me.AtencionToolStripMenuItem.Text = "Atencion"
         '
         'PaginaPrincipal

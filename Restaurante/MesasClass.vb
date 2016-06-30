@@ -115,4 +115,26 @@ Public Class MesasClass
         End Try
 
     End Sub
+    Public Sub CargarComboMesa(ByVal comboactual As ComboBox)
+        Try
+            Abrir()
+            Dim objComando As New SqlCommand("MesasCargarCombo", Me.objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+            With comboactual
+                .DataSource = objDataTable
+                .DisplayMember = "detalle"
+                .ValueMember = "id"
+
+            End With
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+
+        End Try
+    End Sub
 End Class

@@ -72,6 +72,8 @@
     <Compile Include="AtencionForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CartaClass.vb" />
+    <Compile Include="CategoriaClass.vb" />
     <Compile Include="CategoriasClass.vb" />
     <Compile Include="CategoriasGrid.Designer.vb">
       <DependentUpon>CategoriasGrid.vb</DependentUpon>
@@ -136,6 +138,7 @@
     <Compile Include="MesasGrid.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MozoClass.vb" />
     <Compile Include="PaginaPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +176,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProvinciasClass.vb" />
+    <Compile Include="TipoFacturaClass.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AtencionForm.resx">
