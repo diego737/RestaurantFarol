@@ -29,6 +29,7 @@ Partial Class PaginaPrincipal
         Me.MesasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.CARTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.AtencionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -49,7 +50,7 @@ Partial Class PaginaPrincipal
         '
         Me.RestauranteToolStripMenuItem.BackColor = System.Drawing.Color.Transparent
         Me.RestauranteToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.barrarestaurante
-        Me.RestauranteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProveedoresToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.MesasToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.ClientesToolStripMenuItem})
+        Me.RestauranteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProveedoresToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.MesasToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.CARTAToolStripMenuItem})
         Me.RestauranteToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RestauranteToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.RestauranteToolStripMenuItem.Name = "RestauranteToolStripMenuItem"
@@ -96,6 +97,14 @@ Partial Class PaginaPrincipal
         Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
+        'CARTAToolStripMenuItem
+        '
+        Me.CARTAToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.barrarestaurante
+        Me.CARTAToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.CARTAToolStripMenuItem.Name = "CARTAToolStripMenuItem"
+        Me.CARTAToolStripMenuItem.Size = New System.Drawing.Size(203, 26)
+        Me.CARTAToolStripMenuItem.Text = "Carta"
+        '
         'AtencionToolStripMenuItem
         '
         Me.AtencionToolStripMenuItem.BackColor = System.Drawing.Color.Transparent
@@ -133,5 +142,6 @@ Partial Class PaginaPrincipal
     Friend WithEvents CategoriasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AtencionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CARTAToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

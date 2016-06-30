@@ -73,7 +73,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CartaClass.vb" />
-    <Compile Include="CategoriaClass.vb" />
+    <Compile Include="CartaGrid.Designer.vb">
+      <DependentUpon>CartaGrid.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CartaGrid.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CategoriasClass.vb" />
     <Compile Include="CategoriasGrid.Designer.vb">
       <DependentUpon>CategoriasGrid.vb</DependentUpon>
@@ -99,6 +104,12 @@
       <DependentUpon>FacturaForm.vb</DependentUpon>
     </Compile>
     <Compile Include="FacturaForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcarta.Designer.vb">
+      <DependentUpon>frmcarta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmcarta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmcategorias.Designer.vb">
@@ -182,6 +193,9 @@
     <EmbeddedResource Include="AtencionForm.resx">
       <DependentUpon>AtencionForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CartaGrid.resx">
+      <DependentUpon>CartaGrid.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CategoriasGrid.resx">
       <DependentUpon>CategoriasGrid.vb</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultasGrid.resx">
       <DependentUpon>ConsultasGrid.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcarta.resx">
+      <DependentUpon>frmcarta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmcategorias.resx">
       <DependentUpon>frmcategorias.vb</DependentUpon>

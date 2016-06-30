@@ -17,7 +17,7 @@
     Public Sub Modificar()
         Try
             categorias.id = CategoriasGrid1.Item("id", CategoriasGrid1.CurrentRow.Index).Value
-            categorias.descripcion = CategoriasGrid1.Item("descripcion", CategoriasGrid1.CurrentRow.Index).Value
+            categorias.nombre = CategoriasGrid1.Item("nombre", CategoriasGrid1.CurrentRow.Index).Value
 
             frmcategorias.accion = "Modificar"
             frmcategorias.categoria = categorias

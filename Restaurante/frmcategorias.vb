@@ -20,7 +20,7 @@
     End Property
 
     Private Sub BtnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BtnAceptar.Click
-        categoria.descripcion = txtdescripcion.Text
+        categoria.nombre = txtnombre.Text
         'categoria.imagen = imagencategorias.Image
         If accion_ = "Insertar" Then
             categoria.Insertar(categoria)
@@ -35,13 +35,13 @@
     Private Sub frmcategorias_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         If accion_ = "Insertar" Then
             Me.Text = "Agregar Categoria"
-            txtdescripcion.Text = ""
+            txtnombre.Text = ""
             'imagencategorias.Image = ""
-        
+
         Else
             Me.Text = "Modificar Categoria"
             txtid.Text = categoria.id
-            txtdescripcion.Text = categoria.descripcion
+            txtnombre.Text = categoria.nombre
             'imagencategorias.Image = categoria.imagen
         End If
     End Sub

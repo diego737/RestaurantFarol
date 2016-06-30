@@ -33,4 +33,9 @@
         MenuStrip1.Enabled = True
         AtencionForm.ShowDialog()
     End Sub
+
+    Private Sub CartaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CARTAToolStripMenuItem.Click
+        MenuStrip1.Enabled = True
+        CartaGrid.ShowDialog()
+    End Sub
 End Class

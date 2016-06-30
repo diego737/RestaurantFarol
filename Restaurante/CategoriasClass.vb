@@ -4,7 +4,7 @@ Public Class CategoriasClass
     Inherits Conexion
 
     Private id_ As Integer
-    Private descripcion_ As String
+    Private nombre_ As String
     Private imagen_ As PictureBox
 
     Public Property id() As Integer
@@ -15,12 +15,12 @@ Public Class CategoriasClass
             id_ = value
         End Set
     End Property
-    Public Property descripcion() As String
+    Public Property nombre() As String
         Get
-            Return descripcion_
+            Return nombre_
         End Get
         Set(ByVal value As String)
-            descripcion_ = value
+            nombre_ = value
         End Set
     End Property
     Public Property imagen() As PictureBox
@@ -58,7 +58,7 @@ Public Class CategoriasClass
 
             Dim objComando As New SqlCommand("pInsertarCategorias", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.AddWithValue("descripcion", categoria.descripcion)
+            objComando.Parameters.AddWithValue("nombre", categoria.nombre)
             'objComando.Parameters.AddWithValue("imagen", categoria.imagen)
            
 
@@ -78,7 +78,7 @@ Public Class CategoriasClass
             Dim objComando As New SqlCommand("pModificarCategorias", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             objComando.Parameters.AddWithValue("id", categoria.id)
-            objComando.Parameters.AddWithValue("descripcion", categoria.descripcion)
+            objComando.Parameters.AddWithValue("nombre", categoria.nombre)
             'objComando.Parameters.AddWithValue("imagen", categoria.imagen)
            
 
@@ -106,6 +106,29 @@ Public Class CategoriasClass
             MsgBox(ex.Message)
         Finally
             Cerrar()
+        End Try
+    End Sub
+
+    Public Sub CargarComboCategorias(ByVal comboactual As ComboBox)
+        Try
+            Abrir()
+            Dim objComando As New SqlCommand("CategoriasCargarCombo", Me.objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+            objDataAdapter.Fill(objDataTable)
+            With comboactual
+                .DataSource = objDataTable
+                .DisplayMember = "nombre"
+                .ValueMember = "id"
+
+            End With
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+
         End Try
     End Sub
 End Class

@@ -27,7 +27,7 @@ Partial Class frmcategorias
         Me.BtnCancelar = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.txtid = New System.Windows.Forms.TextBox
-        Me.txtdescripcion = New System.Windows.Forms.TextBox
+        Me.txtnombre = New System.Windows.Forms.TextBox
         Me.Label2 = New System.Windows.Forms.Label
         Me.imagencategorias = New System.Windows.Forms.PictureBox
         Me.Label3 = New System.Windows.Forms.Label
@@ -81,14 +81,14 @@ Partial Class frmcategorias
         Me.txtid.Size = New System.Drawing.Size(34, 26)
         Me.txtid.TabIndex = 3
         '
-        'txtdescripcion
+        'txtnombre
         '
-        Me.txtdescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtdescripcion.Location = New System.Drawing.Point(120, 70)
-        Me.txtdescripcion.Multiline = True
-        Me.txtdescripcion.Name = "txtdescripcion"
-        Me.txtdescripcion.Size = New System.Drawing.Size(226, 27)
-        Me.txtdescripcion.TabIndex = 5
+        Me.txtnombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtnombre.Location = New System.Drawing.Point(120, 70)
+        Me.txtnombre.Multiline = True
+        Me.txtnombre.Name = "txtnombre"
+        Me.txtnombre.Size = New System.Drawing.Size(226, 27)
+        Me.txtnombre.TabIndex = 5
         '
         'Label2
         '
@@ -98,9 +98,9 @@ Partial Class frmcategorias
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(12, 77)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(102, 20)
+        Me.Label2.Size = New System.Drawing.Size(69, 20)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Descripcion"
+        Me.Label2.Text = "Nombre"
         '
         'imagencategorias
         '
@@ -131,7 +131,7 @@ Partial Class frmcategorias
         Me.ClientSize = New System.Drawing.Size(388, 258)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.imagencategorias)
-        Me.Controls.Add(Me.txtdescripcion)
+        Me.Controls.Add(Me.txtnombre)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtid)
         Me.Controls.Add(Me.Label1)
@@ -150,7 +150,7 @@ Partial Class frmcategorias
     Friend WithEvents BtnCancelar As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtid As System.Windows.Forms.TextBox
-    Friend WithEvents txtdescripcion As System.Windows.Forms.TextBox
+    Friend WithEvents txtnombre As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents imagencategorias As System.Windows.Forms.PictureBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
