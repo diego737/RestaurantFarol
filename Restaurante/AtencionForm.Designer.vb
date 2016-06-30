@@ -42,6 +42,7 @@ Partial Class AtencionForm
         Me.GroupBox6 = New System.Windows.Forms.GroupBox
         Me.LFecha = New System.Windows.Forms.Label
         Me.DgvCarta1 = New System.Windows.Forms.DataGridView
+        Me.Label2 = New System.Windows.Forms.Label
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Mozo.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -165,9 +166,9 @@ Partial Class AtencionForm
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvDetalle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Categoria, Me.Detalle, Me.Precio})
-        Me.DgvDetalle.Location = New System.Drawing.Point(7, 185)
+        Me.DgvDetalle.Location = New System.Drawing.Point(7, 196)
         Me.DgvDetalle.Name = "DgvDetalle"
-        Me.DgvDetalle.Size = New System.Drawing.Size(594, 353)
+        Me.DgvDetalle.Size = New System.Drawing.Size(594, 342)
         Me.DgvDetalle.TabIndex = 12
         '
         'Categoria
@@ -235,11 +236,21 @@ Partial Class AtencionForm
         Me.DgvCarta1.Size = New System.Drawing.Size(451, 495)
         Me.DgvCarta1.TabIndex = 20
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(274, 166)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
+        Me.Label2.TabIndex = 21
+        Me.Label2.Text = "DETALLE"
+        '
         'AtencionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1070, 550)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DgvCarta1)
         Me.Controls.Add(Me.Mozo)
         Me.Controls.Add(Me.GroupBox1)
@@ -252,6 +263,7 @@ Partial Class AtencionForm
         Me.Controls.Add(Me.Label1)
         Me.MinimumSize = New System.Drawing.Size(1086, 588)
         Me.Name = "AtencionForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AtencionForm"
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Mozo.ResumeLayout(False)
@@ -288,4 +300,5 @@ Partial Class AtencionForm
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents LFecha As System.Windows.Forms.Label
     Friend WithEvents DgvCarta1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
