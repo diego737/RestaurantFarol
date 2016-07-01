@@ -100,6 +100,7 @@
     <Compile Include="ConsultasGrid.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Detalle.vb" />
     <Compile Include="FacturaForm.Designer.vb">
       <DependentUpon>FacturaForm.vb</DependentUpon>
     </Compile>

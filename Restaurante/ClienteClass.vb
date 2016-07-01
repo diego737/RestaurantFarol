@@ -51,7 +51,7 @@ Public Class ClienteClass
             telefono_ = value
         End Set
     End Property
-    Public Property IdProvincia() As Integer
+    Public Property IdProvincias() As Integer
         Get
             Return IdProvincia_
         End Get
@@ -72,7 +72,7 @@ Public Class ClienteClass
 
             objDataAdapter.Fill(objDataTable)
             tabla.DataSource = objDataTable
-            tabla.Columns("IdProvincia").Visible = False
+            tabla.Columns("IdProvincias").Visible = False
 
 
         Catch ex As Exception
@@ -93,7 +93,7 @@ Public Class ClienteClass
             objComando.Parameters.AddWithValue("dni", cliente.dni)
             objComando.Parameters.AddWithValue("direccion", cliente.direccion)
             objComando.Parameters.AddWithValue("telefono", cliente.telefono)
-            objComando.Parameters.AddWithValue("IdProvincia", cliente.IdProvincia)
+            objComando.Parameters.AddWithValue("IdProvincias", cliente.IdProvincias)
             objComando.ExecuteNonQuery()
 
         Catch ex As Exception
@@ -115,7 +115,7 @@ Public Class ClienteClass
             objComando.Parameters.AddWithValue("dni", cliente.dni)
             objComando.Parameters.AddWithValue("direccion", cliente.direccion)
             objComando.Parameters.AddWithValue("telefono", cliente.telefono)
-            objComando.Parameters.AddWithValue("IdProvincia", cliente.IdProvincia)
+            objComando.Parameters.AddWithValue("IdProvincias", cliente.IdProvincias)
             objComando.ExecuteNonQuery()
 
         Catch ex As Exception

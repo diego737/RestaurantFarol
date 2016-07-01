@@ -37,11 +37,14 @@ Public Class AtencionForm
         Precio = DgvCarta1(4, DgvCarta1.CurrentRow.Index).Value
 
         DgvDetalle.Rows.Add(nombre, descripcion, Precio)
+
     End Sub
 
 
     Private Sub DgvDetalle_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvDetalle.CellDoubleClick
+     
         DgvDetalle.Rows.RemoveAt(DgvCarta1.CurrentRow.Index)
+
     End Sub
 
     

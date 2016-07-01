@@ -34,15 +34,15 @@ Partial Class AtencionForm
         Me.GroupBox3 = New System.Windows.Forms.GroupBox
         Me.ComboMesa = New System.Windows.Forms.ComboBox
         Me.DgvDetalle = New System.Windows.Forms.DataGridView
-        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Detalle = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.GroupBox4 = New System.Windows.Forms.GroupBox
         Me.ComboTipoFactura = New System.Windows.Forms.ComboBox
         Me.GroupBox6 = New System.Windows.Forms.GroupBox
         Me.LFecha = New System.Windows.Forms.Label
         Me.DgvCarta1 = New System.Windows.Forms.DataGridView
         Me.Label2 = New System.Windows.Forms.Label
+        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Mozo.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -165,26 +165,11 @@ Partial Class AtencionForm
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvDetalle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Categoria, Me.Detalle, Me.Precio})
+        Me.DgvDetalle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Categoria, Me.Nombre, Me.Precio})
         Me.DgvDetalle.Location = New System.Drawing.Point(7, 196)
         Me.DgvDetalle.Name = "DgvDetalle"
         Me.DgvDetalle.Size = New System.Drawing.Size(594, 342)
         Me.DgvDetalle.TabIndex = 12
-        '
-        'Categoria
-        '
-        Me.Categoria.HeaderText = "Categoria"
-        Me.Categoria.Name = "Categoria"
-        '
-        'Detalle
-        '
-        Me.Detalle.HeaderText = "Detalle"
-        Me.Detalle.Name = "Detalle"
-        '
-        'Precio
-        '
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
         '
         'GroupBox4
         '
@@ -245,6 +230,21 @@ Partial Class AtencionForm
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "DETALLE"
         '
+        'Categoria
+        '
+        Me.Categoria.HeaderText = "Categoria"
+        Me.Categoria.Name = "Categoria"
+        '
+        'Nombre
+        '
+        Me.Nombre.HeaderText = "Nombre"
+        Me.Nombre.Name = "Nombre"
+        '
+        'Precio
+        '
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        '
         'AtencionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -292,13 +292,13 @@ Partial Class AtencionForm
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboMesa As System.Windows.Forms.ComboBox
     Friend WithEvents DgvDetalle As System.Windows.Forms.DataGridView
-    Friend WithEvents Categoria As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Detalle As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboTipoFactura As System.Windows.Forms.ComboBox
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents LFecha As System.Windows.Forms.Label
     Friend WithEvents DgvCarta1 As System.Windows.Forms.DataGridView
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Categoria As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

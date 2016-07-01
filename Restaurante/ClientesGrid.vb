@@ -23,7 +23,7 @@ Public Class ClientesGrid
             clientes.dni = ClientesGrid1.Item("dni", ClientesGrid1.CurrentRow.Index).Value
             clientes.direccion = ClientesGrid1.Item("direccion", ClientesGrid1.CurrentRow.Index).Value
             clientes.telefono = ClientesGrid1.Item("telefono", ClientesGrid1.CurrentRow.Index).Value
-            clientes.IdProvincia = ClientesGrid1.Item("IdProvincia", ClientesGrid1.CurrentRow.Index).Value
+            clientes.IdProvincias = ClientesGrid1.Item("IdProvincias", ClientesGrid1.CurrentRow.Index).Value
             frmclientes.accion = "Modificar"
             frmclientes.cliente = clientes
             frmclientes.ShowDialog()
