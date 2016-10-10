@@ -1,10 +1,38 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+
 Public Class AtencionForm
+    'Dim suma As Integer
 
-    Private Sub TableLayoutPanel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs)
+    Private accion_ As String
+    Private atencion_ As New AtencionClass
+    Private detalle_ As New DetalleClass
+    Public Property accion() As String
+        Get
+            Return accion_
+        End Get
+        Set(ByVal value As String)
+            accion_ = value
+        End Set
+    End Property
+    Public Property atencion() As AtencionClass
+        Get
+            Return atencion_
+        End Get
+        Set(ByVal value As AtencionClass)
+            atencion_ = value
 
-    End Sub
+        End Set
+    End Property
+    Public Property detalle() As DetalleClass
+        Get
+            Return detalle_
+        End Get
+        Set(ByVal value As DetalleClass)
+            detalle_ = value
+
+        End Set
+    End Property
 
     Private Sub AtencionForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim mozo As New MozoClass
@@ -12,15 +40,43 @@ Public Class AtencionForm
 
         Dim carta As New CartaClass
         carta.consultarCarta(DgvCarta1)
+        Dim detalle As New DetalleClass
+        detalle.consultarDetalle(DgvDetalle)
 
         Dim mesa As New MesasClass
         mesa.CargarComboMesa(ComboMesa)
 
-        Dim tipofactura As New TipoFacturaClass
-        tipofactura.CargarComboTipoFactura(ComboTipoFactura)
+        Dim tiposfactura As New TipoFacturaClass
+        tiposfactura.CargarComboTipoFactura(ComboTipoFactura)
         LFecha.Text = DateTime.Now.ToString("dd/MM/yyyy")
         Dim clientes As New ClienteClass
         clientes.CargarComboClientes(ComboClientes)
+        If accion_ = "Insertar" Then
+
+            Me.Text = "Agregar Atencion"
+            ComboMozo.SelectedItem = ""
+            ComboMesa.SelectedItem = ""
+            ComboClientes.SelectedItem = ""
+            ComboTipoFactura.SelectedItem = ""
+            txtnumatencion.Text = ""
+            LFecha.Text = ""
+
+
+
+        Else
+            Me.Text = "Modificar Atencion"
+            ComboMozo.SelectedValue = atencion.mozo
+            ComboMesa.SelectedValue = atencion.mesa
+            ComboClientes.SelectedValue = atencion.cliente
+            ComboTipoFactura.SelectedValue = atencion.tipofactura
+            txtnumatencion.Text = atencion.id
+            LFecha.Text = atencion.fecha
+
+
+        End If
+
+
+
     End Sub
 
 
@@ -29,22 +85,70 @@ Public Class AtencionForm
     End Sub
 
     Private Sub DgvCarta1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvCarta1.CellDoubleClick
-        Dim nombre, descripcion As String
-        Dim Precio As Decimal
+        'Dim nombre, descripcion As String
+        'Dim Precio As Decimal
+        'Dim idAtencion As String
 
-        nombre = DgvCarta1(2, DgvCarta1.CurrentRow.Index).Value
-        descripcion = DgvCarta1(3, DgvCarta1.CurrentRow.Index).Value
-        Precio = DgvCarta1(4, DgvCarta1.CurrentRow.Index).Value
+        'nombre = DgvCarta1(2, DgvCarta1.CurrentRow.Index).Value
+        'descripcion = DgvCarta1(3, DgvCarta1.CurrentRow.Index).Value
+        'Precio = DgvCarta1(4, DgvCarta1.CurrentRow.Index).Value
+        'idAtencion = txtnumatencion.Text
+        'DgvDetalle.Rows.Add(nombre, descripcion, Precio, idAtencion)
 
-        DgvDetalle.Rows.Add(nombre, descripcion, Precio)
+        detalle.categoria = DgvCarta1.CurrentRow.Cells(2).Value()
+        detalle.nombre = DgvCarta1.CurrentRow.Cells(3).Value
+        detalle.precio = DgvCarta1.CurrentRow.Cells(4).Value
+        detalle.idAtencion = txtnumatencion.Text
+        detalle.Insertar2(detalle)
+        detalle.consultarDetalle(DgvDetalle)
+       
+        'For Each fila As DataGridViewRow In DgvDetalle.Rows
+
+        '    suma += CInt(fila.Cells(3).Value)
+
+
+        'Next
+        'subtotaltxt.Text = suma.ToString
 
     End Sub
 
 
     Private Sub DgvDetalle_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvDetalle.CellDoubleClick
-     
-        DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+        Dim mensaje As DialogResult = MessageBox.Show("Esta seguro de borrar este detalle?", "Adveretencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+        If mensaje = Windows.Forms.DialogResult.OK Then
+            Try
+                detalle.BorrarDetalle(DgvDetalle.Item("id", DgvDetalle.CurrentRow.Index).Value)
+                detalle.consultarDetalle(DgvDetalle)
+            Catch ex As Exception
+                MsgBox("Debe seleccionar una Atencion")
+            Finally
+            End Try
+        End If
+        'DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
 
+    End Sub
+
+
+
+    Private Sub Aceptarbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptarbutton.Click
+        atencion.mozo = ComboMozo.SelectedValue
+        atencion.mesa = ComboMesa.SelectedValue
+        atencion.cliente = ComboClientes.SelectedValue
+        'atencion.id = txtnumatencion.Text
+        atencion.tipofactura = ComboTipoFactura.SelectedValue
+        atencion.fecha = LFecha.Text
+
+
+        If accion_ = "Insertar" Then
+            atencion.Insertar(atencion)
+        Else
+            atencion.id = txtnumatencion.Text
+            atencion.Modificar(atencion)
+
+
+        End If
+        atencion.consultarAtenciones(AtencionencursoForm.AtencionesDgv)
+        Me.Close()
     End Sub
 
     

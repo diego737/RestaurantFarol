@@ -30,7 +30,7 @@ Partial Class AtencionForm
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.ComboClientes = New System.Windows.Forms.ComboBox
         Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.txtnumatencion = New System.Windows.Forms.TextBox
         Me.GroupBox3 = New System.Windows.Forms.GroupBox
         Me.ComboMesa = New System.Windows.Forms.ComboBox
         Me.DgvDetalle = New System.Windows.Forms.DataGridView
@@ -40,9 +40,9 @@ Partial Class AtencionForm
         Me.LFecha = New System.Windows.Forms.Label
         Me.DgvCarta1 = New System.Windows.Forms.DataGridView
         Me.Label2 = New System.Windows.Forms.Label
-        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
-        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Aceptarbutton = New System.Windows.Forms.Button
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.subtotaltxt = New System.Windows.Forms.TextBox
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Mozo.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -120,7 +120,7 @@ Partial Class AtencionForm
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.txtnumatencion)
         Me.GroupBox2.Location = New System.Drawing.Point(405, 43)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(204, 41)
@@ -128,15 +128,15 @@ Partial Class AtencionForm
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Atencion N°"
         '
-        'TextBox1
+        'txtnumatencion
         '
-        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.txtnumatencion.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(0, 19)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(198, 20)
-        Me.TextBox1.TabIndex = 5
+        Me.txtnumatencion.Enabled = False
+        Me.txtnumatencion.Location = New System.Drawing.Point(0, 19)
+        Me.txtnumatencion.Name = "txtnumatencion"
+        Me.txtnumatencion.Size = New System.Drawing.Size(198, 20)
+        Me.txtnumatencion.TabIndex = 5
         '
         'GroupBox3
         '
@@ -165,7 +165,6 @@ Partial Class AtencionForm
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvDetalle.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Categoria, Me.Nombre, Me.Precio})
         Me.DgvDetalle.Location = New System.Drawing.Point(7, 196)
         Me.DgvDetalle.Name = "DgvDetalle"
         Me.DgvDetalle.Size = New System.Drawing.Size(594, 342)
@@ -230,26 +229,42 @@ Partial Class AtencionForm
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "DETALLE"
         '
-        'Categoria
+        'Aceptarbutton
         '
-        Me.Categoria.HeaderText = "Categoria"
-        Me.Categoria.Name = "Categoria"
+        Me.Aceptarbutton.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Aceptarbutton.Location = New System.Drawing.Point(698, 553)
+        Me.Aceptarbutton.Name = "Aceptarbutton"
+        Me.Aceptarbutton.Size = New System.Drawing.Size(136, 38)
+        Me.Aceptarbutton.TabIndex = 22
+        Me.Aceptarbutton.Text = "Aceptar"
+        Me.Aceptarbutton.UseVisualStyleBackColor = True
         '
-        'Nombre
+        'Label3
         '
-        Me.Nombre.HeaderText = "Nombre"
-        Me.Nombre.Name = "Nombre"
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(362, 561)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(88, 24)
+        Me.Label3.TabIndex = 23
+        Me.Label3.Text = "Subtotal"
         '
-        'Precio
+        'subtotaltxt
         '
-        Me.Precio.HeaderText = "Precio"
-        Me.Precio.Name = "Precio"
+        Me.subtotaltxt.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.subtotaltxt.Location = New System.Drawing.Point(456, 555)
+        Me.subtotaltxt.Name = "subtotaltxt"
+        Me.subtotaltxt.Size = New System.Drawing.Size(145, 30)
+        Me.subtotaltxt.TabIndex = 24
         '
         'AtencionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1070, 550)
+        Me.ClientSize = New System.Drawing.Size(1070, 594)
+        Me.Controls.Add(Me.subtotaltxt)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Aceptarbutton)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DgvCarta1)
         Me.Controls.Add(Me.Mozo)
@@ -288,7 +303,7 @@ Partial Class AtencionForm
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboClientes As System.Windows.Forms.ComboBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtnumatencion As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboMesa As System.Windows.Forms.ComboBox
     Friend WithEvents DgvDetalle As System.Windows.Forms.DataGridView
@@ -298,7 +313,7 @@ Partial Class AtencionForm
     Friend WithEvents LFecha As System.Windows.Forms.Label
     Friend WithEvents DgvCarta1 As System.Windows.Forms.DataGridView
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Categoria As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Nombre As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents subtotaltxt As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Aceptarbutton As System.Windows.Forms.Button
 End Class

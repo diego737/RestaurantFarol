@@ -31,7 +31,7 @@
 
     Private Sub AtencionToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AtencionToolStripMenuItem.Click
         MenuStrip1.Enabled = True
-        AtencionForm.ShowDialog()
+        AtencionencursoForm.ShowDialog()
     End Sub
 
     Private Sub CartaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CARTAToolStripMenuItem.Click
