@@ -37,12 +37,17 @@ Partial Class AtencionForm
         Me.GroupBox4 = New System.Windows.Forms.GroupBox
         Me.ComboTipoFactura = New System.Windows.Forms.ComboBox
         Me.GroupBox6 = New System.Windows.Forms.GroupBox
-        Me.LFecha = New System.Windows.Forms.Label
         Me.DgvCarta1 = New System.Windows.Forms.DataGridView
         Me.Label2 = New System.Windows.Forms.Label
         Me.Aceptarbutton = New System.Windows.Forms.Button
         Me.Label3 = New System.Windows.Forms.Label
         Me.subtotaltxt = New System.Windows.Forms.TextBox
+        Me.DgvDetalle2 = New System.Windows.Forms.DataGridView
+        Me.LFecha = New System.Windows.Forms.TextBox
+        Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.IdAtencion = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Mozo.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -52,6 +57,7 @@ Partial Class AtencionForm
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         CType(Me.DgvCarta1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvDetalle2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -167,7 +173,7 @@ Partial Class AtencionForm
         Me.DgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvDetalle.Location = New System.Drawing.Point(7, 196)
         Me.DgvDetalle.Name = "DgvDetalle"
-        Me.DgvDetalle.Size = New System.Drawing.Size(594, 342)
+        Me.DgvDetalle.Size = New System.Drawing.Size(17, 342)
         Me.DgvDetalle.TabIndex = 12
         '
         'GroupBox4
@@ -200,17 +206,6 @@ Partial Class AtencionForm
         Me.GroupBox6.TabIndex = 19
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Fecha"
-        '
-        'LFecha
-        '
-        Me.LFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LFecha.AutoSize = True
-        Me.LFecha.Location = New System.Drawing.Point(79, 13)
-        Me.LFecha.Name = "LFecha"
-        Me.LFecha.Size = New System.Drawing.Size(37, 13)
-        Me.LFecha.TabIndex = 8
-        Me.LFecha.Text = "Fecha"
-        Me.LFecha.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'DgvCarta1
         '
@@ -257,11 +252,49 @@ Partial Class AtencionForm
         Me.subtotaltxt.Size = New System.Drawing.Size(145, 30)
         Me.subtotaltxt.TabIndex = 24
         '
+        'DgvDetalle2
+        '
+        Me.DgvDetalle2.AllowUserToAddRows = False
+        Me.DgvDetalle2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvDetalle2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Categoria, Me.nombre, Me.Precio, Me.IdAtencion})
+        Me.DgvDetalle2.Location = New System.Drawing.Point(30, 196)
+        Me.DgvDetalle2.Name = "DgvDetalle2"
+        Me.DgvDetalle2.Size = New System.Drawing.Size(537, 202)
+        Me.DgvDetalle2.TabIndex = 25
+        '
+        'LFecha
+        '
+        Me.LFecha.Location = New System.Drawing.Point(62, 20)
+        Me.LFecha.Name = "LFecha"
+        Me.LFecha.Size = New System.Drawing.Size(100, 20)
+        Me.LFecha.TabIndex = 0
+        '
+        'Categoria
+        '
+        Me.Categoria.HeaderText = "Categoria"
+        Me.Categoria.Name = "Categoria"
+        '
+        'nombre
+        '
+        Me.nombre.HeaderText = "Nombre"
+        Me.nombre.Name = "nombre"
+        '
+        'Precio
+        '
+        Me.Precio.HeaderText = "Precio"
+        Me.Precio.Name = "Precio"
+        '
+        'IdAtencion
+        '
+        Me.IdAtencion.HeaderText = "IdAtencion"
+        Me.IdAtencion.Name = "IdAtencion"
+        '
         'AtencionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1070, 594)
+        Me.Controls.Add(Me.DgvDetalle2)
         Me.Controls.Add(Me.subtotaltxt)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Aceptarbutton)
@@ -291,6 +324,7 @@ Partial Class AtencionForm
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         CType(Me.DgvCarta1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvDetalle2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -310,10 +344,15 @@ Partial Class AtencionForm
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents ComboTipoFactura As System.Windows.Forms.ComboBox
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
-    Friend WithEvents LFecha As System.Windows.Forms.Label
     Friend WithEvents DgvCarta1 As System.Windows.Forms.DataGridView
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents subtotaltxt As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Aceptarbutton As System.Windows.Forms.Button
+    Friend WithEvents DgvDetalle2 As System.Windows.Forms.DataGridView
+    Friend WithEvents LFecha As System.Windows.Forms.TextBox
+    Friend WithEvents Categoria As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nombre As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents IdAtencion As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

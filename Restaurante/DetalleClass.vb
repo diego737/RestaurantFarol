@@ -77,28 +77,27 @@ Public Class DetalleClass
         End Try
     End Sub
 
-    'Public Sub Insertar(ByVal detalle As DetalleClass)
-    '    Dim cartagrid As New AtencionForm
-    '    Try
-    '        Abrir()
-    '        Dim sql As String = "INSERT INTO Detalle(id,categoria,nombre,precio,idAtencion) VALUES (@id,@categoria,@nombre,@precio,@idAtencion)"
-    '        For Each fila As DataGridViewRow In cartagrid.DgvCarta1.Rows
-    '            Using Command As New SqlCommand(sql, objConexion)
-    '                Command.Parameters.AddWithValue("@id", fila.Cells(0).Value)
-    '                Command.Parameters.AddWithValue("@categoria", fila.Cells(1).Value)
-    '                Command.Parameters.AddWithValue("@nombre", fila.Cells(2).Value)
-    '                Command.Parameters.AddWithValue("@precio", fila.Cells(3).Value)
-    '                Command.Parameters.AddWithValue("@idAtencion", fila.Cells(4).Value)
-    '                Command.ExecuteNonQuery()
-    '            End Using
-    '        Next
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message)
-    '        Cerrar()
+    Public Sub Insertar3(ByVal detalle As DataGridView)
+        Dim cartagrid As New AtencionForm
+        Try
+            Abrir()
+            Dim sql As String = "INSERT INTO Detalle (categoria,nombre,precio,idAtencion) VALUES (@categoria,@nombre,@precio,@idAtencion)"
+            For Each fila As DataGridViewRow In detalle.Rows
+                Using Command As New SqlCommand(sql, objConexion)
+                    Command.Parameters.AddWithValue("@categoria", fila.Cells(0).Value)
+                    Command.Parameters.AddWithValue("@nombre", fila.Cells(1).Value)
+                    Command.Parameters.AddWithValue("@precio", fila.Cells(2).Value)
+                    Command.Parameters.AddWithValue("@idAtencion", fila.Cells(3).Value)
+                    Command.ExecuteNonQuery()
+                End Using
+            Next
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Cerrar()
 
 
-    '    End Try
-    'End Sub
+        End Try
+    End Sub
 
     Public Sub Insertar(ByVal detalle As DetalleClass)
         Dim cartagrid As New AtencionForm
@@ -164,6 +163,8 @@ Public Class DetalleClass
             Cerrar()
         End Try
     End Sub
+
+
 End Class
 
 

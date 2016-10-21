@@ -48,7 +48,7 @@ Public Class AtencionForm
 
         Dim tiposfactura As New TipoFacturaClass
         tiposfactura.CargarComboTipoFactura(ComboTipoFactura)
-        LFecha.Text = DateTime.Now.ToString("dd/MM/yyyy")
+        'DateTime.Now.ToString("dd/MM/yyyy")
         Dim clientes As New ClienteClass
         clientes.CargarComboClientes(ComboClientes)
         If accion_ = "Insertar" Then
@@ -59,7 +59,7 @@ Public Class AtencionForm
             ComboClientes.SelectedItem = ""
             ComboTipoFactura.SelectedItem = ""
             txtnumatencion.Text = ""
-            LFecha.Text = ""
+            LFecha.Text = Today
 
 
 
@@ -85,22 +85,24 @@ Public Class AtencionForm
     End Sub
 
     Private Sub DgvCarta1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvCarta1.CellDoubleClick
-        'Dim nombre, descripcion As String
-        'Dim Precio As Decimal
-        'Dim idAtencion As String
+        Dim nombre, descripcion As String
+        Dim Precio As Decimal
+        Dim idAtencion As String
 
-        'nombre = DgvCarta1(2, DgvCarta1.CurrentRow.Index).Value
-        'descripcion = DgvCarta1(3, DgvCarta1.CurrentRow.Index).Value
-        'Precio = DgvCarta1(4, DgvCarta1.CurrentRow.Index).Value
-        'idAtencion = txtnumatencion.Text
-        'DgvDetalle.Rows.Add(nombre, descripcion, Precio, idAtencion)
 
-        detalle.categoria = DgvCarta1.CurrentRow.Cells(2).Value()
-        detalle.nombre = DgvCarta1.CurrentRow.Cells(3).Value
-        detalle.precio = DgvCarta1.CurrentRow.Cells(4).Value
-        detalle.idAtencion = txtnumatencion.Text
-        detalle.Insertar2(detalle)
-        detalle.consultarDetalle(DgvDetalle)
+        nombre = DgvCarta1(2, DgvCarta1.CurrentRow.Index).Value
+        descripcion = DgvCarta1(3, DgvCarta1.CurrentRow.Index).Value
+        Precio = DgvCarta1(4, DgvCarta1.CurrentRow.Index).Value
+        idAtencion = atencion.UltimaAtencion
+        'idAtencion = 1
+        DgvDetalle2.Rows.Add(nombre, descripcion, Precio, idAtencion)
+
+        'detalle.categoria = DgvCarta1.CurrentRow.Cells(2).Value()
+        'detalle.nombre = DgvCarta1.CurrentRow.Cells(3).Value
+        'detalle.precio = DgvCarta1.CurrentRow.Cells(4).Value
+        'detalle.idAtencion = txtnumatencion.Text
+        'detalle.Insertar2(detalle)
+        'detalle.consultarDetalle(DgvDetalle)
        
         'For Each fila As DataGridViewRow In DgvDetalle.Rows
 
@@ -114,20 +116,19 @@ Public Class AtencionForm
 
 
     Private Sub DgvDetalle_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvDetalle.CellDoubleClick
-        Dim mensaje As DialogResult = MessageBox.Show("Esta seguro de borrar este detalle?", "Adveretencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-        If mensaje = Windows.Forms.DialogResult.OK Then
-            Try
-                detalle.BorrarDetalle(DgvDetalle.Item("id", DgvDetalle.CurrentRow.Index).Value)
-                detalle.consultarDetalle(DgvDetalle)
-            Catch ex As Exception
-                MsgBox("Debe seleccionar una Atencion")
-            Finally
-            End Try
-        End If
-        'DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+        'Dim mensaje As DialogResult = MessageBox.Show("Esta seguro de borrar este detalle?", "Adveretencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+        'If mensaje = Windows.Forms.DialogResult.OK Then
+        '    Try
+        '        detalle.BorrarDetalle(DgvDetalle.Item("id", DgvDetalle.CurrentRow.Index).Value)
+        '        detalle.consultarDetalle(DgvDetalle)
+        '    Catch ex As Exception
+        '        MsgBox("Debe seleccionar una Atencion")
+        '    Finally
+        '    End Try
+        'End If
+        DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
 
     End Sub
-
 
 
     Private Sub Aceptarbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptarbutton.Click
@@ -141,15 +142,21 @@ Public Class AtencionForm
 
         If accion_ = "Insertar" Then
             atencion.Insertar(atencion)
+            detalle.Insertar3(DgvDetalle2)
         Else
             atencion.id = txtnumatencion.Text
             atencion.Modificar(atencion)
 
-
         End If
         atencion.consultarAtenciones(AtencionencursoForm.AtencionesDgv)
         Me.Close()
+
+
     End Sub
 
     
+
+    Private Sub DgvDetalle2_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvDetalle2.CellDoubleClick
+        DgvDetalle2.Rows.Remove(DgvDetalle2.CurrentRow)
+    End Sub
 End Class

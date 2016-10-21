@@ -161,4 +161,18 @@ Public Class AtencionClass
             Cerrar()
         End Try
     End Sub
+
+    Public Function UltimaAtencion()
+        Abrir()
+        Try
+
+            Dim objComando As New SqlCommand("pUltimaAtencion", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            Return objComando.ExecuteScalar() + 1
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Cerrar()
+            Return False
+        End Try
+    End Function
 End Class

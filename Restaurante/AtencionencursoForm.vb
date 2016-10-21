@@ -13,7 +13,7 @@
         Dim atencion As New AtencionClass
         atencion.consultarAtenciones(AtencionesDgv)
         AtencionesDgv.Columns("TipoFactura").Visible = False
-        AtencionesDgv.Columns("Fecha").Visible = False
+        'AtencionesDgv.Columns("Fecha").Visible = False
         AtencionesDgv.Columns("Cliente").Visible = False
 
     End Sub

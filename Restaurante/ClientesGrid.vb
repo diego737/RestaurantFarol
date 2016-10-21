@@ -61,7 +61,7 @@ Public Class ClientesGrid
     End Sub
 
     Private Sub Txt_buscarpornombre_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Txt_buscarpornombre.TextChanged
-        Dim Conexion As String = "Data Source= DIEGO-PC\SQLEXPRESS;Database= Restaurante; Integrated Security=sspi"
+        Dim Conexion As String = "Data Source= DIEGO1-PC\SQLEXPRESS;Database= Restaurante; Integrated Security=sspi"
         Dim objconexion As New SqlConnection(Conexion)
 
 
