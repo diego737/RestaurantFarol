@@ -60,6 +60,7 @@ Public Class AtencionForm
             ComboTipoFactura.SelectedItem = ""
             txtnumatencion.Text = ""
             LFecha.Text = Today
+            DgvDetalle2.Rows.Clear()
 
 
 
@@ -71,7 +72,7 @@ Public Class AtencionForm
             ComboTipoFactura.SelectedValue = atencion.tipofactura
             txtnumatencion.Text = atencion.id
             LFecha.Text = atencion.fecha
-
+            detalle.consultarDetalleActual(DgvDetalle2, atencion.id)
 
         End If
 
@@ -88,15 +89,16 @@ Public Class AtencionForm
         Dim nombre, descripcion As String
         Dim Precio As Decimal
         Dim idAtencion As String
-
+        Dim nuevo As Integer
 
         nombre = DgvCarta1(2, DgvCarta1.CurrentRow.Index).Value
         descripcion = DgvCarta1(3, DgvCarta1.CurrentRow.Index).Value
         Precio = DgvCarta1(4, DgvCarta1.CurrentRow.Index).Value
-        idAtencion = atencion.UltimaAtencion
-        'idAtencion = 1
-        DgvDetalle2.Rows.Add(nombre, descripcion, Precio, idAtencion)
-
+        'idAtencion = atencion.UltimaAtencion
+        idAtencion = 1
+        nuevo = 1
+        DgvDetalle2.Rows.Add(nombre, descripcion, Precio, idAtencion, nuevo)
+        DgvDetalle2.Columns("idAtencion").Visible = False
         'detalle.categoria = DgvCarta1.CurrentRow.Cells(2).Value()
         'detalle.nombre = DgvCarta1.CurrentRow.Cells(3).Value
         'detalle.precio = DgvCarta1.CurrentRow.Cells(4).Value
@@ -142,10 +144,11 @@ Public Class AtencionForm
 
         If accion_ = "Insertar" Then
             atencion.Insertar(atencion)
-            detalle.Insertar3(DgvDetalle2)
+            detalle.Insertar3(DgvDetalle2, atencion.UltimaAtencion)
         Else
             atencion.id = txtnumatencion.Text
             atencion.Modificar(atencion)
+            detalle.Insertar3(DgvDetalle2, atencion.id)
 
         End If
         atencion.consultarAtenciones(AtencionencursoForm.AtencionesDgv)
@@ -159,4 +162,5 @@ Public Class AtencionForm
     Private Sub DgvDetalle2_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvDetalle2.CellDoubleClick
         DgvDetalle2.Rows.Remove(DgvDetalle2.CurrentRow)
     End Sub
+
 End Class

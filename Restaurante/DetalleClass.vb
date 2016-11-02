@@ -9,6 +9,7 @@ Public Class DetalleClass
     Dim nombre_ As String
     Dim precio_ As Decimal
     Dim idAtencion_ As Integer
+    Dim nuevo_ As Integer
 
 
     Public Property id() As Integer
@@ -54,6 +55,14 @@ Public Class DetalleClass
             idAtencion_ = value
         End Set
     End Property
+    Public Property nuevo() As Integer
+        Get
+            Return nuevo_
+        End Get
+        Set(ByVal value As Integer)
+            nuevo_ = value
+        End Set
+    End Property
 
     Public Sub consultarDetalle(ByVal tabla As DataGridView)
         Try
@@ -61,6 +70,7 @@ Public Class DetalleClass
 
             Dim objComando As New SqlCommand("pConsultarDetalles", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
+
             Dim objDataTable As New Data.DataTable
             Dim objDataAdapter As New SqlDataAdapter(objComando)
 
@@ -76,19 +86,53 @@ Public Class DetalleClass
             Cerrar()
         End Try
     End Sub
+    Public Sub consultarDetalleActual(ByVal tabla As DataGridView, ByVal idAtencion As Integer)
+        Try
+            Abrir()
 
-    Public Sub Insertar3(ByVal detalle As DataGridView)
+            Dim objComando As New SqlCommand("pConsultarAtencionActual", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.AddWithValue("@idAtencion", idAtencion)
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+
+            objDataAdapter.Fill(objDataTable)
+            tabla.Rows.Clear()
+            Dim fila As Integer = 0
+            For Each row As DataRow In objDataTable.Rows
+                tabla.Rows.Add()
+                tabla.Rows(fila).Cells("categoria").Value = row.Item("categoria")
+                tabla.Rows(fila).Cells("nombre").Value = row.Item("nombre")
+                tabla.Rows(fila).Cells("precio").Value = row.Item("precio")
+                tabla.Rows(fila).Cells("nuevo").Value = row.Item("nuevo")
+                fila += 1
+            Next
+            'tabla.DataSource = objDataTable
+            'tabla.Columns("id").Visible = False
+            'tabla.Columns("idAtencion").Visible = False
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Sub
+
+    Public Sub Insertar3(ByVal detalle As DataGridView, ByVal ultimaAtencion As Integer)
         Dim cartagrid As New AtencionForm
         Try
             Abrir()
             Dim sql As String = "INSERT INTO Detalle (categoria,nombre,precio,idAtencion) VALUES (@categoria,@nombre,@precio,@idAtencion)"
             For Each fila As DataGridViewRow In detalle.Rows
                 Using Command As New SqlCommand(sql, objConexion)
-                    Command.Parameters.AddWithValue("@categoria", fila.Cells(0).Value)
-                    Command.Parameters.AddWithValue("@nombre", fila.Cells(1).Value)
-                    Command.Parameters.AddWithValue("@precio", fila.Cells(2).Value)
-                    Command.Parameters.AddWithValue("@idAtencion", fila.Cells(3).Value)
-                    Command.ExecuteNonQuery()
+                    If fila.Cells("nuevo").Value = 1 Then
+                        Command.Parameters.AddWithValue("@categoria", fila.Cells(0).Value)
+                        Command.Parameters.AddWithValue("@nombre", fila.Cells(1).Value)
+                        Command.Parameters.AddWithValue("@precio", fila.Cells(2).Value)
+                        Command.Parameters.AddWithValue("@idAtencion", ultimaAtencion)
+                        Command.ExecuteNonQuery()
+                    End If
                 End Using
             Next
         Catch ex As Exception

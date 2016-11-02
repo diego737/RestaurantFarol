@@ -37,17 +37,18 @@ Partial Class AtencionForm
         Me.GroupBox4 = New System.Windows.Forms.GroupBox
         Me.ComboTipoFactura = New System.Windows.Forms.ComboBox
         Me.GroupBox6 = New System.Windows.Forms.GroupBox
+        Me.LFecha = New System.Windows.Forms.TextBox
         Me.DgvCarta1 = New System.Windows.Forms.DataGridView
         Me.Label2 = New System.Windows.Forms.Label
         Me.Aceptarbutton = New System.Windows.Forms.Button
         Me.Label3 = New System.Windows.Forms.Label
         Me.subtotaltxt = New System.Windows.Forms.TextBox
         Me.DgvDetalle2 = New System.Windows.Forms.DataGridView
-        Me.LFecha = New System.Windows.Forms.TextBox
         Me.Categoria = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.Precio = New System.Windows.Forms.DataGridViewTextBoxColumn
         Me.IdAtencion = New System.Windows.Forms.DataGridViewTextBoxColumn
+        Me.nuevo = New System.Windows.Forms.DataGridViewTextBoxColumn
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Mozo.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -207,6 +208,13 @@ Partial Class AtencionForm
         Me.GroupBox6.TabStop = False
         Me.GroupBox6.Text = "Fecha"
         '
+        'LFecha
+        '
+        Me.LFecha.Location = New System.Drawing.Point(62, 20)
+        Me.LFecha.Name = "LFecha"
+        Me.LFecha.Size = New System.Drawing.Size(100, 20)
+        Me.LFecha.TabIndex = 0
+        '
         'DgvCarta1
         '
         Me.DgvCarta1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -256,18 +264,11 @@ Partial Class AtencionForm
         '
         Me.DgvDetalle2.AllowUserToAddRows = False
         Me.DgvDetalle2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvDetalle2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Categoria, Me.nombre, Me.Precio, Me.IdAtencion})
+        Me.DgvDetalle2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Categoria, Me.nombre, Me.Precio, Me.IdAtencion, Me.nuevo})
         Me.DgvDetalle2.Location = New System.Drawing.Point(30, 196)
         Me.DgvDetalle2.Name = "DgvDetalle2"
         Me.DgvDetalle2.Size = New System.Drawing.Size(537, 202)
         Me.DgvDetalle2.TabIndex = 25
-        '
-        'LFecha
-        '
-        Me.LFecha.Location = New System.Drawing.Point(62, 20)
-        Me.LFecha.Name = "LFecha"
-        Me.LFecha.Size = New System.Drawing.Size(100, 20)
-        Me.LFecha.TabIndex = 0
         '
         'Categoria
         '
@@ -288,6 +289,12 @@ Partial Class AtencionForm
         '
         Me.IdAtencion.HeaderText = "IdAtencion"
         Me.IdAtencion.Name = "IdAtencion"
+        Me.IdAtencion.Visible = False
+        '
+        'nuevo
+        '
+        Me.nuevo.HeaderText = "nuevo"
+        Me.nuevo.Name = "nuevo"
         '
         'AtencionForm
         '
@@ -355,4 +362,5 @@ Partial Class AtencionForm
     Friend WithEvents nombre As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Precio As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents IdAtencion As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nuevo As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

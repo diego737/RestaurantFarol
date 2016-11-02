@@ -168,7 +168,7 @@ Public Class AtencionClass
 
             Dim objComando As New SqlCommand("pUltimaAtencion", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            Return objComando.ExecuteScalar() + 1
+            Return objComando.ExecuteScalar()
         Catch ex As Exception
             MsgBox(ex.Message)
             Cerrar()
