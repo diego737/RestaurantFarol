@@ -109,7 +109,7 @@ Public Class DetalleClass
             Next
             'tabla.DataSource = objDataTable
             'tabla.Columns("id").Visible = False
-            'tabla.Columns("idAtencion").Visible = False
+            tabla.Columns("nuevo").Visible = False
 
 
         Catch ex As Exception
@@ -119,20 +119,39 @@ Public Class DetalleClass
         End Try
     End Sub
 
+    Public Sub ActualizarDetalleActual(ByVal tabla As DataGridView, ByRef subtotal As Decimal, ByVal txtSubtotal As TextBox)
+        Try
+            Dim fila As Integer = 0
+            subtotal = 0
+            For Each row As DataGridViewRow In tabla.Rows
+                subtotal = subtotal + tabla.Rows(fila).Cells("precio").Value
+                fila += 1
+            Next
+            txtSubtotal.Text = subtotal
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
     Public Sub Insertar3(ByVal detalle As DataGridView, ByVal ultimaAtencion As Integer)
         Dim cartagrid As New AtencionForm
         Try
             Abrir()
-            Dim sql As String = "INSERT INTO Detalle (categoria,nombre,precio,idAtencion) VALUES (@categoria,@nombre,@precio,@idAtencion)"
+            Dim sql As String = "Delete Detalle where IdAtencion=@IdAtencion"
+            Dim commando As New SqlCommand(sql, objConexion)
+            commando.Parameters.AddWithValue("@idAtencion", ultimaAtencion)
+            commando.ExecuteNonQuery()
+            sql = "INSERT INTO Detalle (categoria,nombre,precio,idAtencion) VALUES (@categoria,@nombre,@precio,@idAtencion)"
+
             For Each fila As DataGridViewRow In detalle.Rows
                 Using Command As New SqlCommand(sql, objConexion)
-                    If fila.Cells("nuevo").Value = 1 Then
-                        Command.Parameters.AddWithValue("@categoria", fila.Cells(0).Value)
-                        Command.Parameters.AddWithValue("@nombre", fila.Cells(1).Value)
-                        Command.Parameters.AddWithValue("@precio", fila.Cells(2).Value)
-                        Command.Parameters.AddWithValue("@idAtencion", ultimaAtencion)
-                        Command.ExecuteNonQuery()
-                    End If
+                    'If fila.Cells("nuevo").Value = 1 Then
+                    Command.Parameters.AddWithValue("@categoria", fila.Cells(0).Value)
+                    Command.Parameters.AddWithValue("@nombre", fila.Cells(1).Value)
+                    Command.Parameters.AddWithValue("@precio", fila.Cells(2).Value)
+                    Command.Parameters.AddWithValue("@idAtencion", ultimaAtencion)
+                    Command.ExecuteNonQuery()
+                    ' End If
                 End Using
             Next
         Catch ex As Exception

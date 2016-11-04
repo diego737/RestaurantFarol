@@ -3,7 +3,7 @@ Imports System.Data.SqlClient
 
 Public Class AtencionForm
     'Dim suma As Integer
-
+    Dim subtotal As Decimal = 0
     Private accion_ As String
     Private atencion_ As New AtencionClass
     Private detalle_ As New DetalleClass
@@ -36,6 +36,7 @@ Public Class AtencionForm
 
     Private Sub AtencionForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim mozo As New MozoClass
+
         mozo.CargarComboMozo(ComboMozo)
 
         Dim carta As New CartaClass
@@ -73,6 +74,8 @@ Public Class AtencionForm
             txtnumatencion.Text = atencion.id
             LFecha.Text = atencion.fecha
             detalle.consultarDetalleActual(DgvDetalle2, atencion.id)
+            detalle.ActualizarDetalleActual(DgvDetalle2, subtotal, subtotaltxt)
+            subtotaltxt.Text = subtotal
 
         End If
 
@@ -99,6 +102,7 @@ Public Class AtencionForm
         nuevo = 1
         DgvDetalle2.Rows.Add(nombre, descripcion, Precio, idAtencion, nuevo)
         DgvDetalle2.Columns("idAtencion").Visible = False
+        detalle.ActualizarDetalleActual(DgvDetalle2, subtotal, subtotaltxt)
         'detalle.categoria = DgvCarta1.CurrentRow.Cells(2).Value()
         'detalle.nombre = DgvCarta1.CurrentRow.Cells(3).Value
         'detalle.precio = DgvCarta1.CurrentRow.Cells(4).Value
