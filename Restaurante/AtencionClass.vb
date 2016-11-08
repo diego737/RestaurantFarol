@@ -89,6 +89,10 @@ Public Class AtencionClass
             objDataAdapter.Fill(objDataTable)
             tabla.DataSource = objDataTable
             'tabla.Columns("id").Visible = False
+            tabla.Columns("idMozo").Visible = False
+            tabla.Columns("idMesa").Visible = False
+            tabla.Columns("Cliente").Visible = False
+            tabla.Columns("TipoFactura").Visible = False
 
 
         Catch ex As Exception

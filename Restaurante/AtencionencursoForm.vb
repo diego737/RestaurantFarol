@@ -13,7 +13,7 @@
         Dim atencion As New AtencionClass
         atencion.consultarAtenciones(AtencionesDgv)
         AtencionesDgv.Columns("TipoFactura").Visible = False
-        'AtencionesDgv.Columns("Fecha").Visible = False
+        ''AtencionesDgv.Columns("Fecha").Visible = False
         AtencionesDgv.Columns("Cliente").Visible = False
 
     End Sub
@@ -53,5 +53,13 @@
             Finally
             End Try
         End If
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Dim miimpresion As New Impresiones
+        atencion.id = AtencionesDgv.Item("id", AtencionesDgv.CurrentRow.Index).Value
+        miimpresion.Factura(rptFactura, rptFactura.Factura1, atencion.id)
+
+
     End Sub
 End Class

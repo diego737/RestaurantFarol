@@ -24,22 +24,22 @@ Partial Class AtencionencursoForm
     Private Sub InitializeComponent()
         Me.NuevaAtencionbutton = New System.Windows.Forms.Button
         Me.AtencionesEnCurso = New System.Windows.Forms.GroupBox
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Button3 = New System.Windows.Forms.Button
+        Me.Label1 = New System.Windows.Forms.Label
+        Me.Atenciones = New System.Windows.Forms.GroupBox
+        Me.Button5 = New System.Windows.Forms.Button
+        Me.Button4 = New System.Windows.Forms.Button
+        Me.Button2 = New System.Windows.Forms.Button
+        Me.Button1 = New System.Windows.Forms.Button
         Me.AtencionesDgv = New System.Windows.Forms.DataGridView
         Me.ModicarButton = New System.Windows.Forms.Button
         Me.borrarButton = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Atenciones = New System.Windows.Forms.GroupBox
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.Button5 = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
         Me.AtencionesEnCurso.SuspendLayout()
-        CType(Me.AtencionesDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Atenciones.SuspendLayout()
+        CType(Me.AtencionesDgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NuevaAtencionbutton
@@ -69,6 +69,104 @@ Partial Class AtencionencursoForm
         Me.AtencionesEnCurso.TabStop = False
         Me.AtencionesEnCurso.Text = "Atenciones en Curso"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(496, 337)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(68, 15)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Facturadas"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Red
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(466, 337)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(21, 15)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "La"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(496, 306)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(73, 15)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Sin Facturar"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(203, 404)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(84, 35)
+        Me.Button3.TabIndex = 6
+        Me.Button3.Text = "Facturar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(466, 306)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(21, 15)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "La"
+        '
+        'Atenciones
+        '
+        Me.Atenciones.Controls.Add(Me.Button5)
+        Me.Atenciones.Controls.Add(Me.Button4)
+        Me.Atenciones.Controls.Add(Me.Button2)
+        Me.Atenciones.Controls.Add(Me.Button1)
+        Me.Atenciones.Location = New System.Drawing.Point(469, 34)
+        Me.Atenciones.Name = "Atenciones"
+        Me.Atenciones.Size = New System.Drawing.Size(100, 258)
+        Me.Atenciones.TabIndex = 5
+        Me.Atenciones.TabStop = False
+        Me.Atenciones.Text = "Buscar"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(10, 206)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(84, 35)
+        Me.Button5.TabIndex = 6
+        Me.Button5.Text = "A Facturar"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(10, 149)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(84, 35)
+        Me.Button4.TabIndex = 5
+        Me.Button4.Text = "Facturadas"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(10, 37)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(84, 35)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "Actuales"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(10, 93)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(84, 35)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Todas"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'AtencionesDgv
         '
         Me.AtencionesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -95,104 +193,6 @@ Partial Class AtencionencursoForm
         Me.borrarButton.Text = "Borrar"
         Me.borrarButton.UseVisualStyleBackColor = True
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(10, 93)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(84, 35)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Todas"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Atenciones
-        '
-        Me.Atenciones.Controls.Add(Me.Button5)
-        Me.Atenciones.Controls.Add(Me.Button4)
-        Me.Atenciones.Controls.Add(Me.Button2)
-        Me.Atenciones.Controls.Add(Me.Button1)
-        Me.Atenciones.Location = New System.Drawing.Point(469, 34)
-        Me.Atenciones.Name = "Atenciones"
-        Me.Atenciones.Size = New System.Drawing.Size(100, 258)
-        Me.Atenciones.TabIndex = 5
-        Me.Atenciones.TabStop = False
-        Me.Atenciones.Text = "Buscar"
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(10, 37)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(84, 35)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Actuales"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(203, 404)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(84, 35)
-        Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Facturar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(10, 149)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(84, 35)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Facturadas"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(10, 206)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(84, 35)
-        Me.Button5.TabIndex = 6
-        Me.Button5.Text = "A Facturar"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(466, 306)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(21, 15)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "La"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(496, 306)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 15)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Sin Facturar"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Red
-        Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(466, 337)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(21, 15)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "La"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(496, 337)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 15)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Facturadas"
-        '
         'AtencionencursoForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -207,8 +207,8 @@ Partial Class AtencionencursoForm
         Me.Text = "|"
         Me.AtencionesEnCurso.ResumeLayout(False)
         Me.AtencionesEnCurso.PerformLayout()
-        CType(Me.AtencionesDgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Atenciones.ResumeLayout(False)
+        CType(Me.AtencionesDgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
