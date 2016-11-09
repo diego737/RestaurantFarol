@@ -104,7 +104,7 @@ Partial Class AtencionencursoForm
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(84, 35)
         Me.Button3.TabIndex = 6
-        Me.Button3.Text = "Facturar"
+        Me.Button3.Text = "Imprimir"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label1

@@ -1,4 +1,6 @@
 ﻿Imports CrystalDecisions.Shared
+Imports System.Data
+Imports System.Data.SqlClient
 Public Class Impresiones
     Inherits Conexion
     Public Sub Configurar(ByVal objReporte As Object)
@@ -27,5 +29,25 @@ Public Class Impresiones
         formulario.ShowDialog()
         formulario.Dispose()
 
+    End Sub
+
+
+    Public Sub ActualizarImpresa(ByVal idAtencion As Integer)
+
+        Try
+            Abrir()
+
+            Dim objComando As New SqlCommand("pActualizarImpresa", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+            objComando.Parameters.Add("@id", SqlDbType.Int)
+            objComando.Parameters("@id").Value = idatencion
+
+            objComando.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
     End Sub
 End Class

@@ -20,8 +20,8 @@
     Public Sub modificar()
         Try
             atencion.id = AtencionesDgv.Item("id", AtencionesDgv.CurrentRow.Index).Value
-            atencion.mozo = AtencionesDgv.Item("Mozo", AtencionesDgv.CurrentRow.Index).Value
-            atencion.mesa = AtencionesDgv.Item("Mesa", AtencionesDgv.CurrentRow.Index).Value
+            atencion.mozo = AtencionesDgv.Item("idMozo", AtencionesDgv.CurrentRow.Index).Value
+            atencion.mesa = AtencionesDgv.Item("idMesa", AtencionesDgv.CurrentRow.Index).Value
             atencion.cliente = AtencionesDgv.Item("Cliente", AtencionesDgv.CurrentRow.Index).Value
             atencion.tipofactura = AtencionesDgv.Item("TipoFactura", AtencionesDgv.CurrentRow.Index).Value
             atencion.fecha = AtencionesDgv.Item("Fecha", AtencionesDgv.CurrentRow.Index).Value

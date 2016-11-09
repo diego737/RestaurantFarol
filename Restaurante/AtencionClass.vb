@@ -9,6 +9,7 @@ Public Class AtencionClass
     Dim cliente_ As String
     Dim tipoFactura_ As String
     Dim fecha_ As Date
+    Dim impresa_ As Boolean
 
   
     Public Property id() As Integer
@@ -75,6 +76,15 @@ Public Class AtencionClass
             fecha_ = value
         End Set
     End Property
+    Public Property impresa() As Boolean
+        Get
+            Return impresa_
+
+        End Get
+        Set(ByVal value As Boolean)
+            impresa_ = value
+        End Set
+    End Property
  
 
     Public Sub consultarAtenciones(ByVal tabla As DataGridView)
@@ -87,13 +97,23 @@ Public Class AtencionClass
             Dim objDataAdapter As New SqlDataAdapter(objComando)
 
             objDataAdapter.Fill(objDataTable)
+
             tabla.DataSource = objDataTable
             'tabla.Columns("id").Visible = False
             tabla.Columns("idMozo").Visible = False
             tabla.Columns("idMesa").Visible = False
             tabla.Columns("Cliente").Visible = False
             tabla.Columns("TipoFactura").Visible = False
+            tabla.Columns("impresa").Visible = False
 
+            Dim fila As Integer = 0
+            For Each row As DataGridViewRow In tabla.Rows
+                If tabla.Rows(fila).Cells("impresa").Value = True Then
+                    row.DefaultCellStyle.BackColor = Color.Red
+                    row.DefaultCellStyle.ForeColor = Color.White
+                End If
+                fila += 1
+            Next
 
         Catch ex As Exception
             MsgBox(ex.Message)
