@@ -245,6 +245,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Factura.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="FacturaForm.resx">
+      <DependentUpon>FacturaForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmcarta.resx">
       <DependentUpon>frmcarta.vb</DependentUpon>
     </EmbeddedResource>

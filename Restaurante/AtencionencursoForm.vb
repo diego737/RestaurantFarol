@@ -10,12 +10,7 @@
     End Sub
 
     Private Sub AtencionencursoForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim atencion As New AtencionClass
         atencion.consultarAtenciones(AtencionesDgv)
-        AtencionesDgv.Columns("TipoFactura").Visible = False
-        ''AtencionesDgv.Columns("Fecha").Visible = False
-        AtencionesDgv.Columns("Cliente").Visible = False
-
     End Sub
     Public Sub modificar()
         Try
@@ -59,7 +54,7 @@
         Dim miimpresion As New Impresiones
         atencion.id = AtencionesDgv.Item("id", AtencionesDgv.CurrentRow.Index).Value
         miimpresion.Factura(rptFactura, rptFactura.Factura1, atencion.id)
-
-
+        miimpresion.ActualizarImpresa(atencion.id)
+        atencion.consultarAtenciones(AtencionesDgv)
     End Sub
 End Class

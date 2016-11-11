@@ -39,8 +39,8 @@ Public Class Impresiones
 
             Dim objComando As New SqlCommand("pActualizarImpresa", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
-            objComando.Parameters.Add("@id", SqlDbType.Int)
-            objComando.Parameters("@id").Value = idatencion
+            objComando.Parameters.Add("@idAtencion", SqlDbType.Int)
+            objComando.Parameters("@idAtencion").Value = idAtencion
 
             objComando.ExecuteNonQuery()
 
