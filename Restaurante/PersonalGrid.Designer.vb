@@ -85,7 +85,8 @@ Partial Class PersonalGrid
         '
         'Personalgrid1
         '
-        Me.Personalgrid1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Personalgrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.Personalgrid1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.Personalgrid1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Personalgrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken
         Me.Personalgrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken
@@ -93,16 +94,16 @@ Partial Class PersonalGrid
         Me.Personalgrid1.GridColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Personalgrid1.Location = New System.Drawing.Point(119, 12)
         Me.Personalgrid1.Name = "Personalgrid1"
-        Me.Personalgrid1.Size = New System.Drawing.Size(407, 508)
+        Me.Personalgrid1.Size = New System.Drawing.Size(312, 508)
         Me.Personalgrid1.TabIndex = 4
         '
         'PersonalGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.barrarestaurante
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_7
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(544, 532)
+        Me.ClientSize = New System.Drawing.Size(451, 532)
         Me.Controls.Add(Me.Personalgrid1)
         Me.Controls.Add(Me.BtnSalir)
         Me.Controls.Add(Me.BtnBorrar)

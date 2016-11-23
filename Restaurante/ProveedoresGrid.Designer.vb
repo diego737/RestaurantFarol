@@ -42,12 +42,12 @@ Partial Class ProveedoresGrid
         Me.ProveedoresGrid1.Location = New System.Drawing.Point(124, 12)
         Me.ProveedoresGrid1.Name = "ProveedoresGrid1"
         Me.ProveedoresGrid1.ReadOnly = True
-        Me.ProveedoresGrid1.Size = New System.Drawing.Size(699, 499)
+        Me.ProveedoresGrid1.Size = New System.Drawing.Size(680, 499)
         Me.ProveedoresGrid1.TabIndex = 0
         '
         'btnSalir
         '
-        Me.btnSalir.BackgroundImage = CType(resources.GetObject("btnSalir.BackgroundImage"), System.Drawing.Image)
+        Me.btnSalir.BackgroundImage = Global.Restaurante.My.Resources.Resources.Madera
         Me.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnSalir.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.ForeColor = System.Drawing.Color.White
@@ -101,9 +101,9 @@ Partial Class ProveedoresGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.barrarestaurante
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_7
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(835, 532)
+        Me.ClientSize = New System.Drawing.Size(830, 532)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnBorrar)
         Me.Controls.Add(Me.btnModificar)

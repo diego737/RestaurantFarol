@@ -85,7 +85,7 @@ Partial Class CategoriasGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.barrarestaurante
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_7
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(511, 485)
         Me.Controls.Add(Me.BtnBorrar)
@@ -93,6 +93,7 @@ Partial Class CategoriasGrid
         Me.Controls.Add(Me.BtnAgregar)
         Me.Controls.Add(Me.CategoriasGrid1)
         Me.Name = "CategoriasGrid"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CategoriasGrid"
         CType(Me.CategoriasGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

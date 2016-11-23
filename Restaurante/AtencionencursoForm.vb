@@ -57,4 +57,24 @@
         miimpresion.ActualizarImpresa(atencion.id)
         atencion.consultarAtenciones(AtencionesDgv)
     End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+
+        atencion.consultarAtencionesFacturadas(AtencionesDgv)
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+        atencion.consultarAtenciones(AtencionesDgv)
+    End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+
+        atencion.consultarAtencionesaFacturar(AtencionesDgv)
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+
+        atencion.consultarAtencionesdeHoy(AtencionesDgv)
+    End Sub
 End Class

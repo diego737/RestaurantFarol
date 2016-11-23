@@ -95,7 +95,7 @@ Partial Class MesasGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.barrarestaurante
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_7
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(439, 529)
         Me.Controls.Add(Me.BtnSalir)
@@ -104,6 +104,7 @@ Partial Class MesasGrid
         Me.Controls.Add(Me.BtnAgregar)
         Me.Controls.Add(Me.MesasGrid1)
         Me.Name = "MesasGrid"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MesasGrid"
         CType(Me.MesasGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

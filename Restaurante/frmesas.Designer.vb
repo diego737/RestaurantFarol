@@ -35,6 +35,7 @@ Partial Class frmesas
         '
         Me.BtnAceptar.BackgroundImage = CType(resources.GetObject("BtnAceptar.BackgroundImage"), System.Drawing.Image)
         Me.BtnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BtnAceptar.Font = New System.Drawing.Font("Lucida Bright", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAceptar.ForeColor = System.Drawing.Color.White
         Me.BtnAceptar.Location = New System.Drawing.Point(61, 129)
         Me.BtnAceptar.Name = "BtnAceptar"
@@ -47,6 +48,7 @@ Partial Class frmesas
         '
         Me.BtnCancelar.BackgroundImage = CType(resources.GetObject("BtnCancelar.BackgroundImage"), System.Drawing.Image)
         Me.BtnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.BtnCancelar.Font = New System.Drawing.Font("Lucida Bright", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCancelar.ForeColor = System.Drawing.Color.White
         Me.BtnCancelar.Location = New System.Drawing.Point(192, 129)
         Me.BtnCancelar.Name = "BtnCancelar"
@@ -102,7 +104,7 @@ Partial Class frmesas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.background_1
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_roja
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(360, 192)
         Me.Controls.Add(Me.txtdetalle)

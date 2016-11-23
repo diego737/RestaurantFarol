@@ -111,6 +111,8 @@ Public Class AtencionClass
                 If tabla.Rows(fila).Cells("impresa").Value = True Then
                     row.DefaultCellStyle.BackColor = Color.Red
                     row.DefaultCellStyle.ForeColor = Color.White
+                Else
+                    row.DefaultCellStyle.BackColor = Color.Lime
                 End If
                 fila += 1
             Next
@@ -121,6 +123,98 @@ Public Class AtencionClass
             Cerrar()
         End Try
     End Sub
+    Public Sub consultarAtencionesFacturadas(ByVal tabla As DataGridView)
+        Try
+            Abrir()
+
+            Dim objComando As New SqlCommand("pConsultarAtencionesFacturadas", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+
+            objDataAdapter.Fill(objDataTable)
+            tabla.DataSource = objDataTable
+
+            Dim fila As Integer = 0
+            For Each row As DataGridViewRow In tabla.Rows
+                If tabla.Rows(fila).Cells("impresa").Value = True Then
+                    row.DefaultCellStyle.BackColor = Color.Red
+                    row.DefaultCellStyle.ForeColor = Color.White
+             
+                End If
+                fila += 1
+            Next
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Sub
+    Public Sub consultarAtencionesaFacturar(ByVal tabla As DataGridView)
+        Try
+            Abrir()
+
+            Dim objComando As New SqlCommand("pConsultarAtencionesaFacturar", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+
+            objDataAdapter.Fill(objDataTable)
+            tabla.DataSource = objDataTable
+
+            Dim fila As Integer = 0
+            For Each row As DataGridViewRow In tabla.Rows
+                If tabla.Rows(fila).Cells("impresa").Value = False Then
+                    row.DefaultCellStyle.BackColor = Color.Lime
+
+
+                End If
+                fila += 1
+            Next
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Sub
+    Public Sub consultarAtencionesdeHoy(ByVal tabla As DataGridView)
+        Try
+            Abrir()
+
+            Dim objComando As New SqlCommand("pConsultarAtencionesdeHoy", objConexion)
+            objComando.CommandType = CommandType.StoredProcedure
+
+            Dim objDataTable As New Data.DataTable
+            Dim objDataAdapter As New SqlDataAdapter(objComando)
+
+            objDataAdapter.Fill(objDataTable)
+            tabla.DataSource = objDataTable
+
+            Dim fila As Integer = 0
+            For Each row As DataGridViewRow In tabla.Rows
+                If tabla.Rows(fila).Cells("impresa").Value = True Then
+                    row.DefaultCellStyle.BackColor = Color.Red
+                Else
+                    row.DefaultCellStyle.BackColor = Color.Lime
+
+                End If
+                fila += 1
+            Next
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Cerrar()
+        End Try
+    End Sub
+
     Public Sub Insertar(ByVal atencion As AtencionClass)
         Try
             Abrir()

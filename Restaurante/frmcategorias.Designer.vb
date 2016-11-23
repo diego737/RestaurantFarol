@@ -29,9 +29,6 @@ Partial Class frmcategorias
         Me.txtid = New System.Windows.Forms.TextBox
         Me.txtnombre = New System.Windows.Forms.TextBox
         Me.Label2 = New System.Windows.Forms.Label
-        Me.imagencategorias = New System.Windows.Forms.PictureBox
-        Me.Label3 = New System.Windows.Forms.Label
-        CType(Me.imagencategorias, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnAceptar
@@ -84,7 +81,7 @@ Partial Class frmcategorias
         'txtnombre
         '
         Me.txtnombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtnombre.Location = New System.Drawing.Point(120, 70)
+        Me.txtnombre.Location = New System.Drawing.Point(123, 106)
         Me.txtnombre.Multiline = True
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(226, 27)
@@ -96,41 +93,19 @@ Partial Class frmcategorias
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(12, 77)
+        Me.Label2.Location = New System.Drawing.Point(12, 113)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 20)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Nombre"
         '
-        'imagencategorias
-        '
-        Me.imagencategorias.Location = New System.Drawing.Point(120, 124)
-        Me.imagencategorias.Name = "imagencategorias"
-        Me.imagencategorias.Size = New System.Drawing.Size(108, 45)
-        Me.imagencategorias.TabIndex = 7
-        Me.imagencategorias.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(30, 139)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 20)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Imagen"
-        '
         'frmcategorias
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.background_1
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_roja
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(388, 258)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.imagencategorias)
         Me.Controls.Add(Me.txtnombre)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtid)
@@ -141,7 +116,6 @@ Partial Class frmcategorias
         Me.Name = "frmcategorias"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmcategorias"
-        CType(Me.imagencategorias, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -152,6 +126,4 @@ Partial Class frmcategorias
     Friend WithEvents txtid As System.Windows.Forms.TextBox
     Friend WithEvents txtnombre As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents imagencategorias As System.Windows.Forms.PictureBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

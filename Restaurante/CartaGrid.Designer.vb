@@ -22,7 +22,6 @@ Partial Class CartaGrid
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CartaGrid))
         Me.BtnAgregar = New System.Windows.Forms.Button
         Me.BtnModificar = New System.Windows.Forms.Button
         Me.BtnBorrar = New System.Windows.Forms.Button
@@ -32,7 +31,9 @@ Partial Class CartaGrid
         '
         'BtnAgregar
         '
-        Me.BtnAgregar.BackgroundImage = CType(resources.GetObject("BtnAgregar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnAgregar.BackgroundImage = Global.Restaurante.My.Resources.Resources.Madera1
+        Me.BtnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Sienna
+        Me.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon
         Me.BtnAgregar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAgregar.ForeColor = System.Drawing.Color.White
         Me.BtnAgregar.Location = New System.Drawing.Point(12, 56)
@@ -44,7 +45,7 @@ Partial Class CartaGrid
         '
         'BtnModificar
         '
-        Me.BtnModificar.BackgroundImage = CType(resources.GetObject("BtnModificar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnModificar.BackgroundImage = Global.Restaurante.My.Resources.Resources.Madera
         Me.BtnModificar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModificar.ForeColor = System.Drawing.Color.White
         Me.BtnModificar.Location = New System.Drawing.Point(12, 117)
@@ -56,7 +57,7 @@ Partial Class CartaGrid
         '
         'BtnBorrar
         '
-        Me.BtnBorrar.BackgroundImage = CType(resources.GetObject("BtnBorrar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnBorrar.BackgroundImage = Global.Restaurante.My.Resources.Resources.Madera
         Me.BtnBorrar.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBorrar.ForeColor = System.Drawing.Color.White
         Me.BtnBorrar.Location = New System.Drawing.Point(12, 182)
@@ -71,14 +72,14 @@ Partial Class CartaGrid
         Me.DgvCarta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvCarta.Location = New System.Drawing.Point(127, 49)
         Me.DgvCarta.Name = "DgvCarta"
-        Me.DgvCarta.Size = New System.Drawing.Size(647, 471)
+        Me.DgvCarta.Size = New System.Drawing.Size(515, 471)
         Me.DgvCarta.TabIndex = 3
         '
         'CartaGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.barrarestaurante
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_7
         Me.ClientSize = New System.Drawing.Size(792, 532)
         Me.Controls.Add(Me.DgvCarta)
         Me.Controls.Add(Me.BtnBorrar)

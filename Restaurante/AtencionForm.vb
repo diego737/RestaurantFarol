@@ -102,6 +102,7 @@ Public Class AtencionForm
         nuevo = 1
         DgvDetalle2.Rows.Add(nombre, descripcion, Precio, idAtencion, nuevo)
         DgvDetalle2.Columns("idAtencion").Visible = False
+        DgvDetalle2.Columns("nuevo").Visible = False
         detalle.ActualizarDetalleActual(DgvDetalle2, subtotal, subtotaltxt)
         'detalle.categoria = DgvCarta1.CurrentRow.Cells(2).Value()
         'detalle.nombre = DgvCarta1.CurrentRow.Cells(3).Value
@@ -121,20 +122,20 @@ Public Class AtencionForm
     End Sub
 
 
-    Private Sub DgvDetalle_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvDetalle.CellDoubleClick
-        'Dim mensaje As DialogResult = MessageBox.Show("Esta seguro de borrar este detalle?", "Adveretencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
-        'If mensaje = Windows.Forms.DialogResult.OK Then
-        '    Try
-        '        detalle.BorrarDetalle(DgvDetalle.Item("id", DgvDetalle.CurrentRow.Index).Value)
-        '        detalle.consultarDetalle(DgvDetalle)
-        '    Catch ex As Exception
-        '        MsgBox("Debe seleccionar una Atencion")
-        '    Finally
-        '    End Try
-        'End If
-        DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
+    'Private Sub DgvDetalle_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DgvDetalle.CellDoubleClick
+    '    'Dim mensaje As DialogResult = MessageBox.Show("Esta seguro de borrar este detalle?", "Adveretencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+    '    'If mensaje = Windows.Forms.DialogResult.OK Then
+    '    '    Try
+    '    '        detalle.BorrarDetalle(DgvDetalle.Item("id", DgvDetalle.CurrentRow.Index).Value)
+    '    '        detalle.consultarDetalle(DgvDetalle)
+    '    '    Catch ex As Exception
+    '    '        MsgBox("Debe seleccionar una Atencion")
+    '    '    Finally
+    '    '    End Try
+    '    'End If
+    '    DgvDetalle.Rows.Remove(DgvDetalle.CurrentRow)
 
-    End Sub
+    'End Sub
 
 
     Private Sub Aceptarbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptarbutton.Click
