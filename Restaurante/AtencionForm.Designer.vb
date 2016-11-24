@@ -183,7 +183,7 @@ Partial Class AtencionForm
         Me.DgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvDetalle.Location = New System.Drawing.Point(7, 196)
         Me.DgvDetalle.Name = "DgvDetalle"
-        Me.DgvDetalle.Size = New System.Drawing.Size(10, 342)
+        Me.DgvDetalle.Size = New System.Drawing.Size(17, 342)
         Me.DgvDetalle.TabIndex = 12
         '
         'GroupBox4
@@ -228,10 +228,11 @@ Partial Class AtencionForm
         '
         'DgvCarta1
         '
+        Me.DgvCarta1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DgvCarta1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvCarta1.Location = New System.Drawing.Point(609, 43)
         Me.DgvCarta1.Name = "DgvCarta1"
-        Me.DgvCarta1.Size = New System.Drawing.Size(449, 495)
+        Me.DgvCarta1.Size = New System.Drawing.Size(465, 495)
         Me.DgvCarta1.TabIndex = 20
         '
         'Label2
@@ -277,6 +278,7 @@ Partial Class AtencionForm
         'DgvDetalle2
         '
         Me.DgvDetalle2.AllowUserToAddRows = False
+        Me.DgvDetalle2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DgvDetalle2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvDetalle2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Categoria, Me.nombre, Me.Precio, Me.IdAtencion, Me.nuevo})
         Me.DgvDetalle2.Location = New System.Drawing.Point(30, 196)
@@ -288,16 +290,19 @@ Partial Class AtencionForm
         '
         Me.Categoria.HeaderText = "Categoria"
         Me.Categoria.Name = "Categoria"
+        Me.Categoria.Width = 77
         '
         'nombre
         '
         Me.nombre.HeaderText = "Nombre"
         Me.nombre.Name = "nombre"
+        Me.nombre.Width = 69
         '
         'Precio
         '
         Me.Precio.HeaderText = "Precio"
         Me.Precio.Name = "Precio"
+        Me.Precio.Width = 62
         '
         'IdAtencion
         '
@@ -309,13 +314,14 @@ Partial Class AtencionForm
         '
         Me.nuevo.HeaderText = "nuevo"
         Me.nuevo.Name = "nuevo"
+        Me.nuevo.Width = 62
         '
         'AtencionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.Madera
-        Me.ClientSize = New System.Drawing.Size(1070, 594)
+        Me.ClientSize = New System.Drawing.Size(1077, 594)
         Me.Controls.Add(Me.DgvDetalle2)
         Me.Controls.Add(Me.subtotaltxt)
         Me.Controls.Add(Me.Label3)

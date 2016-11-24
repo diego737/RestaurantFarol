@@ -69,10 +69,11 @@ Partial Class CartaGrid
         '
         'DgvCarta
         '
+        Me.DgvCarta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DgvCarta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvCarta.Location = New System.Drawing.Point(127, 49)
         Me.DgvCarta.Name = "DgvCarta"
-        Me.DgvCarta.Size = New System.Drawing.Size(515, 471)
+        Me.DgvCarta.Size = New System.Drawing.Size(541, 471)
         Me.DgvCarta.TabIndex = 3
         '
         'CartaGrid

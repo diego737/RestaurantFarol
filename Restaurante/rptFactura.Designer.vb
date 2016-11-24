@@ -46,6 +46,7 @@ Partial Class rptFactura
         Me.Controls.Add(Me.cristalfactura)
         Me.Name = "rptFactura"
         Me.Text = "Factura"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub

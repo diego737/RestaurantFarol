@@ -37,6 +37,8 @@ Partial Class AtencionencursoForm
         Me.AtencionesDgv = New System.Windows.Forms.DataGridView
         Me.ModicarButton = New System.Windows.Forms.Button
         Me.borrarButton = New System.Windows.Forms.Button
+        Me.Button6 = New System.Windows.Forms.Button
+        Me.Button7 = New System.Windows.Forms.Button
         Me.AtencionesEnCurso.SuspendLayout()
         Me.Atenciones.SuspendLayout()
         CType(Me.AtencionesDgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,7 +75,7 @@ Partial Class AtencionencursoForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(496, 337)
+        Me.Label4.Location = New System.Drawing.Point(495, 438)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(82, 18)
         Me.Label4.TabIndex = 8
@@ -84,7 +86,7 @@ Partial Class AtencionencursoForm
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Red
         Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Location = New System.Drawing.Point(466, 337)
+        Me.Label3.Location = New System.Drawing.Point(466, 438)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(24, 18)
         Me.Label3.TabIndex = 7
@@ -93,7 +95,7 @@ Partial Class AtencionencursoForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(496, 306)
+        Me.Label2.Location = New System.Drawing.Point(495, 407)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 18)
         Me.Label2.TabIndex = 5
@@ -101,9 +103,9 @@ Partial Class AtencionencursoForm
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(479, 370)
+        Me.Button3.Location = New System.Drawing.Point(479, 481)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(84, 35)
+        Me.Button3.Size = New System.Drawing.Size(92, 35)
         Me.Button3.TabIndex = 6
         Me.Button3.Text = "Imprimir"
         Me.Button3.UseVisualStyleBackColor = True
@@ -113,7 +115,7 @@ Partial Class AtencionencursoForm
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Lime
         Me.Label1.ForeColor = System.Drawing.Color.Lime
-        Me.Label1.Location = New System.Drawing.Point(466, 306)
+        Me.Label1.Location = New System.Drawing.Point(466, 407)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(24, 18)
         Me.Label1.TabIndex = 4
@@ -121,31 +123,33 @@ Partial Class AtencionencursoForm
         '
         'Atenciones
         '
+        Me.Atenciones.Controls.Add(Me.Button7)
+        Me.Atenciones.Controls.Add(Me.Button6)
         Me.Atenciones.Controls.Add(Me.Button5)
         Me.Atenciones.Controls.Add(Me.Button4)
         Me.Atenciones.Controls.Add(Me.Button2)
         Me.Atenciones.Controls.Add(Me.Button1)
         Me.Atenciones.Location = New System.Drawing.Point(469, 34)
         Me.Atenciones.Name = "Atenciones"
-        Me.Atenciones.Size = New System.Drawing.Size(100, 258)
+        Me.Atenciones.Size = New System.Drawing.Size(108, 370)
         Me.Atenciones.TabIndex = 5
         Me.Atenciones.TabStop = False
         Me.Atenciones.Text = "Buscar"
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(10, 206)
+        Me.Button5.Location = New System.Drawing.Point(10, 319)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(84, 35)
+        Me.Button5.Size = New System.Drawing.Size(92, 35)
         Me.Button5.TabIndex = 6
         Me.Button5.Text = "A Facturar"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(10, 145)
+        Me.Button4.Location = New System.Drawing.Point(10, 266)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(84, 35)
+        Me.Button4.Size = New System.Drawing.Size(92, 35)
         Me.Button4.TabIndex = 5
         Me.Button4.Text = "Facturadas"
         Me.Button4.UseVisualStyleBackColor = True
@@ -154,7 +158,7 @@ Partial Class AtencionencursoForm
         '
         Me.Button2.Location = New System.Drawing.Point(10, 86)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(84, 35)
+        Me.Button2.Size = New System.Drawing.Size(92, 35)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "Actuales"
         Me.Button2.UseVisualStyleBackColor = True
@@ -163,7 +167,7 @@ Partial Class AtencionencursoForm
         '
         Me.Button1.Location = New System.Drawing.Point(11, 30)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(84, 35)
+        Me.Button1.Size = New System.Drawing.Size(91, 35)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Todas"
         Me.Button1.UseVisualStyleBackColor = True
@@ -196,6 +200,26 @@ Partial Class AtencionencursoForm
         Me.borrarButton.TabIndex = 3
         Me.borrarButton.Text = "Borrar"
         Me.borrarButton.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(10, 204)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(92, 42)
+        Me.Button6.TabIndex = 7
+        Me.Button6.Text = "Facturadas Hoy"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Location = New System.Drawing.Point(10, 138)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(92, 41)
+        Me.Button7.TabIndex = 8
+        Me.Button7.Text = "A facturar Hoy"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'AtencionencursoForm
         '
@@ -232,4 +256,6 @@ Partial Class AtencionencursoForm
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
 End Class
