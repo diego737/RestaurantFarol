@@ -175,6 +175,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Impresiones.vb" />
+    <Compile Include="Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MesasClass.vb" />
     <Compile Include="MesasGrid.Designer.vb">
       <DependentUpon>MesasGrid.vb</DependentUpon>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmproveedores.resx">
       <DependentUpon>frmproveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MesasGrid.resx">
       <DependentUpon>MesasGrid.vb</DependentUpon>

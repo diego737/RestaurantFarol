@@ -301,6 +301,8 @@ Public Class AtencionClass
             objComando.Parameters("@TipoFactura").Value = atencion.tipofactura
             objComando.Parameters.Add("@Fecha", SqlDbType.DateTime)
             objComando.Parameters("@Fecha").Value = atencion.fecha
+            objComando.Parameters.Add("@PrecioTotal", SqlDbType.Decimal)
+            objComando.Parameters("@PrecioTotal").Value = atencion.precioTotal
            
             
 
@@ -323,6 +325,7 @@ Public Class AtencionClass
             objComando.Parameters.AddWithValue("Cliente", atencion.cliente)
             objComando.Parameters.AddWithValue("TipoFactura", atencion.tipofactura)
             objComando.Parameters.AddWithValue("Fecha", atencion.fecha)
+            objComando.Parameters.AddWithValue("PrecioTotal", atencion.precioTotal)
 
            
 
@@ -366,4 +369,18 @@ Public Class AtencionClass
             Return False
         End Try
     End Function
+
+    Public Sub ActualizarFacturacionDiaria(ByVal tabla As DataGridView, ByRef total As Decimal, ByVal txttotal As TextBox)
+        Try
+            Dim fila As Integer = 0
+            total = 0
+            For Each row As DataGridViewRow In tabla.Rows
+                total = total + tabla.Rows(fila).Cells("PrecioTotal").Value
+                fila += 1
+            Next
+            txttotal.Text = total
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

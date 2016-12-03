@@ -146,7 +146,7 @@ Public Class AtencionForm
         'atencion.id = txtnumatencion.Text
         atencion.tipofactura = ComboTipoFactura.SelectedValue
         atencion.fecha = LFecha.Text
-
+        atencion.precioTotal = subtotaltxt.Text
 
         If accion_ = "Insertar" Then
             atencion.Insertar(atencion)
@@ -169,4 +169,7 @@ Public Class AtencionForm
         DgvDetalle2.Rows.Remove(DgvDetalle2.CurrentRow)
     End Sub
 
+    Private Sub subtotaltxt_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles subtotaltxt.TextChanged
+
+    End Sub
 End Class

@@ -28,6 +28,8 @@ Partial Class FacturacionDiariaForm
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
         Me.DgvFacturacionDiaria = New System.Windows.Forms.DataGridView
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.txttotal = New System.Windows.Forms.TextBox
         CType(Me.DgvFacturacionDiaria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -88,15 +90,38 @@ Partial Class FacturacionDiariaForm
         Me.DgvFacturacionDiaria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvFacturacionDiaria.Location = New System.Drawing.Point(164, 64)
         Me.DgvFacturacionDiaria.Name = "DgvFacturacionDiaria"
-        Me.DgvFacturacionDiaria.Size = New System.Drawing.Size(445, 417)
+        Me.DgvFacturacionDiaria.Size = New System.Drawing.Size(445, 392)
         Me.DgvFacturacionDiaria.TabIndex = 5
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(360, 478)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(107, 25)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Total Dia"
+        '
+        'txttotal
+        '
+        Me.txttotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txttotal.Location = New System.Drawing.Point(473, 475)
+        Me.txttotal.Multiline = True
+        Me.txttotal.Name = "txttotal"
+        Me.txttotal.Size = New System.Drawing.Size(136, 34)
+        Me.txttotal.TabIndex = 7
         '
         'FacturacionDiariaForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.Madera
-        Me.ClientSize = New System.Drawing.Size(744, 493)
+        Me.ClientSize = New System.Drawing.Size(744, 517)
+        Me.Controls.Add(Me.txttotal)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.DgvFacturacionDiaria)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -116,4 +141,6 @@ Partial Class FacturacionDiariaForm
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents DgvFacturacionDiaria As System.Windows.Forms.DataGridView
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents txttotal As System.Windows.Forms.TextBox
 End Class
