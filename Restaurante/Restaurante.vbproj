@@ -126,6 +126,12 @@
       <DependentUpon>Factura.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FacturacionDiariaForm.Designer.vb">
+      <DependentUpon>FacturacionDiariaForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FacturacionDiariaForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FacturaForm.Designer.vb">
       <DependentUpon>FacturaForm.vb</DependentUpon>
     </Compile>
@@ -244,6 +250,9 @@
     <EmbeddedResource Include="Factura.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Factura.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturacionDiariaForm.resx">
+      <DependentUpon>FacturacionDiariaForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacturaForm.resx">
       <DependentUpon>FacturaForm.vb</DependentUpon>

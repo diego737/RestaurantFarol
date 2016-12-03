@@ -61,6 +61,7 @@ Public Class AtencionForm
             ComboTipoFactura.SelectedItem = ""
             txtnumatencion.Text = ""
             LFecha.Text = Today
+
             DgvDetalle2.Rows.Clear()
 
 

@@ -30,13 +30,22 @@
     End Sub
 
     Private Sub AtencionToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AtencionToolStripMenuItem.Click
-        MenuStrip1.Enabled = True
-        AtencionencursoForm.ShowDialog()
+      
 
     End Sub
 
     Private Sub CartaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CARTAToolStripMenuItem.Click
         MenuStrip1.Enabled = True
         CartaGrid.ShowDialog()
+    End Sub
+
+    Private Sub AtencionesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AtencionesToolStripMenuItem.Click
+        MenuStrip1.Enabled = True
+        AtencionencursoForm.ShowDialog()
+    End Sub
+
+    Private Sub ConsultaAtencionesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConsultaAtencionesToolStripMenuItem.Click
+        MenuStrip1.Enabled = True
+        FacturacionDiariaForm.ShowDialog()
     End Sub
 End Class

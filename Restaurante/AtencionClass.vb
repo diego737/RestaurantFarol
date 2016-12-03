@@ -10,6 +10,7 @@ Public Class AtencionClass
     Dim tipoFactura_ As String
     Dim fecha_ As Date
     Dim impresa_ As Boolean
+    Dim precioTotal_ As Decimal
 
   
     Public Property id() As Integer
@@ -85,6 +86,15 @@ Public Class AtencionClass
             impresa_ = value
         End Set
     End Property
+    Public Property precioTotal() As Decimal
+        Get
+            Return precioTotal_
+
+        End Get
+        Set(ByVal value As Decimal)
+            precioTotal_ = value
+        End Set
+    End Property
  
 
     Public Sub consultarAtenciones(ByVal tabla As DataGridView)
@@ -105,6 +115,7 @@ Public Class AtencionClass
             tabla.Columns("Cliente").Visible = False
             tabla.Columns("TipoFactura").Visible = False
             tabla.Columns("impresa").Visible = False
+
 
             Dim fila As Integer = 0
             For Each row As DataGridViewRow In tabla.Rows
@@ -290,6 +301,7 @@ Public Class AtencionClass
             objComando.Parameters("@TipoFactura").Value = atencion.tipofactura
             objComando.Parameters.Add("@Fecha", SqlDbType.DateTime)
             objComando.Parameters("@Fecha").Value = atencion.fecha
+           
             
 
             objComando.ExecuteNonQuery()
@@ -311,6 +323,7 @@ Public Class AtencionClass
             objComando.Parameters.AddWithValue("Cliente", atencion.cliente)
             objComando.Parameters.AddWithValue("TipoFactura", atencion.tipofactura)
             objComando.Parameters.AddWithValue("Fecha", atencion.fecha)
+
            
 
             objComando.ExecuteNonQuery()
