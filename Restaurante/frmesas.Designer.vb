@@ -113,10 +113,11 @@ Partial Class frmesas
         Me.Controls.Add(Me.Id)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnAceptar)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(376, 230)
         Me.Name = "frmesas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmesas"
+        Me.Text = "Agregar/Modificar Mesas"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

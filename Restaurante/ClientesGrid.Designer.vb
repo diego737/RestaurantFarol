@@ -128,9 +128,10 @@ Partial Class ClientesGrid
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.ClientesGrid1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ClientesGrid"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ClientesGrid"
+        Me.Text = "Clientes"
         CType(Me.ClientesGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

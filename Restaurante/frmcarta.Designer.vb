@@ -161,9 +161,10 @@ Partial Class frmcarta
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmcarta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmcarta"
+        Me.Text = "Agregar/Modificar Carta"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

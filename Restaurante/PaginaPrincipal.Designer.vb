@@ -23,16 +23,16 @@ Partial Class PaginaPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
-        Me.RestauranteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.PersonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.MesasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.CARTAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.AtencionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.AtencionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.ConsultaAtencionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ClientesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
+        Me.CartaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.CategoriasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
+        Me.MesasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.PersonalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.Button1 = New System.Windows.Forms.Button
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -40,102 +40,104 @@ Partial Class PaginaPrincipal
         '
         Me.MenuStrip1.AutoSize = False
         Me.MenuStrip1.BackColor = System.Drawing.Color.Transparent
+        Me.MenuStrip1.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_roja
         Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RestauranteToolStripMenuItem, Me.AtencionToolStripMenuItem})
+        Me.MenuStrip1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2)
+        Me.MenuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
+        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AtencionToolStripMenuItem, Me.ClientesToolStripMenuItem1, Me.CartaToolStripMenuItem, Me.CategoriasToolStripMenuItem1, Me.MesasToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.ProveedoresToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(834, 44)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1285, 40)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'RestauranteToolStripMenuItem
-        '
-        Me.RestauranteToolStripMenuItem.BackColor = System.Drawing.SystemColors.Control
-        Me.RestauranteToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
-        Me.RestauranteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProveedoresToolStripMenuItem, Me.PersonalToolStripMenuItem, Me.MesasToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.ClientesToolStripMenuItem, Me.CARTAToolStripMenuItem})
-        Me.RestauranteToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RestauranteToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.RestauranteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent
-        Me.RestauranteToolStripMenuItem.Name = "RestauranteToolStripMenuItem"
-        Me.RestauranteToolStripMenuItem.Size = New System.Drawing.Size(118, 40)
-        Me.RestauranteToolStripMenuItem.Text = "Restaurante"
-        '
-        'ProveedoresToolStripMenuItem
-        '
-        Me.ProveedoresToolStripMenuItem.BackColor = System.Drawing.Color.Transparent
-        Me.ProveedoresToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
-        Me.ProveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.ProveedoresToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent
-        Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
-        '
-        'PersonalToolStripMenuItem
-        '
-        Me.PersonalToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
-        Me.PersonalToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
-        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.PersonalToolStripMenuItem.Text = "Personal"
-        '
-        'MesasToolStripMenuItem
-        '
-        Me.MesasToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
-        Me.MesasToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.MesasToolStripMenuItem.Name = "MesasToolStripMenuItem"
-        Me.MesasToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.MesasToolStripMenuItem.Text = "Mesas"
-        '
-        'CategoriasToolStripMenuItem
-        '
-        Me.CategoriasToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
-        Me.CategoriasToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.CategoriasToolStripMenuItem.Text = "Categorias"
-        '
-        'ClientesToolStripMenuItem
-        '
-        Me.ClientesToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
-        Me.ClientesToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.ClientesToolStripMenuItem.Text = "Clientes"
-        '
-        'CARTAToolStripMenuItem
-        '
-        Me.CARTAToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
-        Me.CARTAToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.CARTAToolStripMenuItem.Name = "CARTAToolStripMenuItem"
-        Me.CARTAToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.CARTAToolStripMenuItem.Text = "Carta"
         '
         'AtencionToolStripMenuItem
         '
         Me.AtencionToolStripMenuItem.BackColor = System.Drawing.Color.Transparent
-        Me.AtencionToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
         Me.AtencionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AtencionesToolStripMenuItem, Me.ConsultaAtencionesToolStripMenuItem})
         Me.AtencionToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AtencionToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.AtencionToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent
         Me.AtencionToolStripMenuItem.Name = "AtencionToolStripMenuItem"
-        Me.AtencionToolStripMenuItem.Size = New System.Drawing.Size(90, 40)
+        Me.AtencionToolStripMenuItem.Size = New System.Drawing.Size(90, 36)
         Me.AtencionToolStripMenuItem.Text = "Atencion"
         '
         'AtencionesToolStripMenuItem
         '
-        Me.AtencionesToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
+        Me.AtencionesToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_roja
+        Me.AtencionesToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.AtencionesToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.AtencionesToolStripMenuItem.Name = "AtencionesToolStripMenuItem"
-        Me.AtencionesToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
+        Me.AtencionesToolStripMenuItem.Size = New System.Drawing.Size(241, 22)
         Me.AtencionesToolStripMenuItem.Text = "Atenciones"
         '
         'ConsultaAtencionesToolStripMenuItem
         '
-        Me.ConsultaAtencionesToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
+        Me.ConsultaAtencionesToolStripMenuItem.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_roja
+        Me.ConsultaAtencionesToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ConsultaAtencionesToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ConsultaAtencionesToolStripMenuItem.Name = "ConsultaAtencionesToolStripMenuItem"
-        Me.ConsultaAtencionesToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
-        Me.ConsultaAtencionesToolStripMenuItem.Text = "Facturacion diaria"
+        Me.ConsultaAtencionesToolStripMenuItem.Size = New System.Drawing.Size(241, 22)
+        Me.ConsultaAtencionesToolStripMenuItem.Text = "Consulta Atenciones"
+        '
+        'ClientesToolStripMenuItem1
+        '
+        Me.ClientesToolStripMenuItem1.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClientesToolStripMenuItem1.ForeColor = System.Drawing.Color.White
+        Me.ClientesToolStripMenuItem1.Name = "ClientesToolStripMenuItem1"
+        Me.ClientesToolStripMenuItem1.Size = New System.Drawing.Size(84, 36)
+        Me.ClientesToolStripMenuItem1.Text = "Clientes"
+        '
+        'CartaToolStripMenuItem
+        '
+        Me.CartaToolStripMenuItem.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CartaToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.CartaToolStripMenuItem.Name = "CartaToolStripMenuItem"
+        Me.CartaToolStripMenuItem.Size = New System.Drawing.Size(63, 36)
+        Me.CartaToolStripMenuItem.Text = "Carta"
+        '
+        'CategoriasToolStripMenuItem1
+        '
+        Me.CategoriasToolStripMenuItem1.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CategoriasToolStripMenuItem1.ForeColor = System.Drawing.Color.White
+        Me.CategoriasToolStripMenuItem1.Name = "CategoriasToolStripMenuItem1"
+        Me.CategoriasToolStripMenuItem1.Size = New System.Drawing.Size(107, 36)
+        Me.CategoriasToolStripMenuItem1.Text = "Categorias"
+        '
+        'MesasToolStripMenuItem
+        '
+        Me.MesasToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.MesasToolStripMenuItem.Name = "MesasToolStripMenuItem"
+        Me.MesasToolStripMenuItem.Size = New System.Drawing.Size(71, 36)
+        Me.MesasToolStripMenuItem.Text = "Mesas"
+        '
+        'PersonalToolStripMenuItem
+        '
+        Me.PersonalToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.PersonalToolStripMenuItem.Name = "PersonalToolStripMenuItem"
+        Me.PersonalToolStripMenuItem.Size = New System.Drawing.Size(92, 36)
+        Me.PersonalToolStripMenuItem.Text = "Personal"
+        '
+        'ProveedoresToolStripMenuItem
+        '
+        Me.ProveedoresToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(123, 36)
+        Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(1199, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(86, 40)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "Salir"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'PaginaPrincipal
         '
@@ -143,30 +145,34 @@ Partial Class PaginaPrincipal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura02
+        Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.pagprincipal
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(834, 410)
+        Me.ClientSize = New System.Drawing.Size(1285, 581)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.White
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "PaginaPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Restaurante Nuevo Farol"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.TransparencyKey = System.Drawing.Color.White
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents RestauranteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ProveedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PersonalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MesasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CategoriasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AtencionToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CARTAToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AtencionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultaAtencionesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents ClientesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CartaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CategoriasToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MesasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PersonalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ProveedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

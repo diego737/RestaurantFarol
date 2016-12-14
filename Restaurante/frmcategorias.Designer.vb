@@ -112,10 +112,11 @@ Partial Class frmcategorias
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnAceptar)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(404, 296)
         Me.Name = "frmcategorias"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmcategorias"
+        Me.Text = "Agregar/Modificar Categorias"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

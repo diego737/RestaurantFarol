@@ -96,16 +96,13 @@ Public Class AtencionClass
         End Set
     End Property
  
-
     Public Sub consultarAtenciones(ByVal tabla As DataGridView)
         Try
             Abrir()
-
             Dim objComando As New SqlCommand("pConsultaAtenciones", objConexion)
             objComando.CommandType = CommandType.StoredProcedure
             Dim objDataTable As New Data.DataTable
             Dim objDataAdapter As New SqlDataAdapter(objComando)
-
             objDataAdapter.Fill(objDataTable)
 
             tabla.DataSource = objDataTable
@@ -115,7 +112,6 @@ Public Class AtencionClass
             tabla.Columns("Cliente").Visible = False
             tabla.Columns("TipoFactura").Visible = False
             tabla.Columns("impresa").Visible = False
-
 
             Dim fila As Integer = 0
             For Each row As DataGridViewRow In tabla.Rows
@@ -127,7 +123,6 @@ Public Class AtencionClass
                 End If
                 fila += 1
             Next
-
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
@@ -314,6 +309,7 @@ Public Class AtencionClass
 
         End Try
     End Sub
+
     Public Sub Modificar(ByVal atencion As AtencionClass)
         Try
             Abrir()
@@ -355,6 +351,17 @@ Public Class AtencionClass
             Cerrar()
         End Try
     End Sub
+
+
+
+
+
+
+
+
+
+
+
 
     Public Function UltimaAtencion()
         Abrir()

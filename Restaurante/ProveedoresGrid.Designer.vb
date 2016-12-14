@@ -109,10 +109,11 @@ Partial Class ProveedoresGrid
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.ProveedoresGrid1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(1000, 570)
         Me.Name = "ProveedoresGrid"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ProveedoresGrid"
+        Me.Text = "Proveedores"
         CType(Me.ProveedoresGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

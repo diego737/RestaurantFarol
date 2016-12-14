@@ -11,6 +11,8 @@
 
     Private Sub AtencionencursoForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         atencion.consultarAtenciones(AtencionesDgv)
+
+
     End Sub
     Public Sub modificar()
         Try

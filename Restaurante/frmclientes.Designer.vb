@@ -214,9 +214,10 @@ Partial Class frmclientes
         Me.Controls.Add(Me.txtDireccion)
         Me.Controls.Add(Me.txtNomyape)
         Me.Controls.Add(Me.txtId)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmclientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmclientes"
+        Me.Text = "Agregar/Modificar Clientes"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

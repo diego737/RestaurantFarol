@@ -339,7 +339,14 @@
     <None Include="Resources\Madera.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Resources\textura-madera-roja.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paginaprincipal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagprincipal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

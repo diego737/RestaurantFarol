@@ -55,4 +55,27 @@
         End If
     End Sub
 
+    Private Sub txtdescripcion_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtdescripcion.KeyPress
+        If Char.IsLetter(e.KeyChar) Or Char.IsControl(e.KeyChar) Or e.KeyChar = " " Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+
+    End Sub
+
+   
+    Private Sub txtdescripcion_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtdescripcion.LostFocus
+
+
+    End Sub
+
+   
+    Private Sub txtprecio_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtprecio.KeyPress
+        If Char.IsNumber(e.KeyChar) Or Char.IsControl(e.KeyChar) Or e.KeyChar = "$" Or e.KeyChar = "," Then
+            e.Handled = False
+        Else
+            e.Handled = True
+        End If
+    End Sub
 End Class

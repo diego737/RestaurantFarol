@@ -109,10 +109,11 @@ Partial Class PersonalGrid
         Me.Controls.Add(Me.BtnBorrar)
         Me.Controls.Add(Me.BtnModificar)
         Me.Controls.Add(Me.BtnAgragar)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximumSize = New System.Drawing.Size(795, 570)
         Me.Name = "PersonalGrid"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "PersonalGrid"
+        Me.Text = "Personal"
         CType(Me.Personalgrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

@@ -213,10 +213,11 @@ Partial Class frmproveedores
         Me.Controls.Add(Me.txtDireccion)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtId)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(432, 415)
         Me.Name = "frmproveedores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmproveedores"
+        Me.Text = "Agregar/Modificar Proveedores"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

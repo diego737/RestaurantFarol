@@ -136,10 +136,11 @@ Partial Class frmpersonal
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnAceptar)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(465, 310)
         Me.Name = "frmpersonal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmpersonal"
+        Me.Text = "Agregar/Modificar Personal"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

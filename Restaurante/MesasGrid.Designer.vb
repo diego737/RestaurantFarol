@@ -103,9 +103,10 @@ Partial Class MesasGrid
         Me.Controls.Add(Me.BtnModificar)
         Me.Controls.Add(Me.BtnAgregar)
         Me.Controls.Add(Me.MesasGrid1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MesasGrid"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "MesasGrid"
+        Me.Text = "Mesas"
         CType(Me.MesasGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

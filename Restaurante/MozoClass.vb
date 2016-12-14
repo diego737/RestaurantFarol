@@ -34,7 +34,7 @@ Public Class MozoClass
             objDataAdapter.Fill(objDataTable)
             With comboactual
                 .DataSource = objDataTable
-                .DisplayMember = "nombre"
+                .DisplayMember = "nomyape"
                 .ValueMember = "id"
 
             End With

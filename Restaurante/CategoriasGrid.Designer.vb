@@ -27,6 +27,7 @@ Partial Class CategoriasGrid
         Me.BtnAgregar = New System.Windows.Forms.Button
         Me.BtnModificar = New System.Windows.Forms.Button
         Me.BtnBorrar = New System.Windows.Forms.Button
+        Me.Button1 = New System.Windows.Forms.Button
         CType(Me.CategoriasGrid1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,6 +82,19 @@ Partial Class CategoriasGrid
         Me.BtnBorrar.Text = "Borrar"
         Me.BtnBorrar.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.White
+        Me.Button1.Font = New System.Drawing.Font("Lucida Bright", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(12, 430)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(101, 43)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Salir"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'CategoriasGrid
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -88,13 +102,15 @@ Partial Class CategoriasGrid
         Me.BackgroundImage = Global.Restaurante.My.Resources.Resources.textura_madera_7
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(511, 485)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.BtnBorrar)
         Me.Controls.Add(Me.BtnModificar)
         Me.Controls.Add(Me.BtnAgregar)
         Me.Controls.Add(Me.CategoriasGrid1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "CategoriasGrid"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "CategoriasGrid"
+        Me.Text = "Categorias"
         CType(Me.CategoriasGrid1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -103,4 +119,5 @@ Partial Class CategoriasGrid
     Friend WithEvents BtnAgregar As System.Windows.Forms.Button
     Friend WithEvents BtnModificar As System.Windows.Forms.Button
     Friend WithEvents BtnBorrar As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

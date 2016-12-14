@@ -22,6 +22,7 @@ Partial Class AtencionForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AtencionForm))
         Me.Label1 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
         Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher
@@ -223,6 +224,7 @@ Partial Class AtencionForm
         '
         Me.LFecha.Location = New System.Drawing.Point(62, 20)
         Me.LFecha.Name = "LFecha"
+        Me.LFecha.ReadOnly = True
         Me.LFecha.Size = New System.Drawing.Size(100, 20)
         Me.LFecha.TabIndex = 0
         '
@@ -272,8 +274,10 @@ Partial Class AtencionForm
         Me.subtotaltxt.Font = New System.Drawing.Font("Modern No. 20", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.subtotaltxt.Location = New System.Drawing.Point(422, 552)
         Me.subtotaltxt.Name = "subtotaltxt"
+        Me.subtotaltxt.ReadOnly = True
         Me.subtotaltxt.Size = New System.Drawing.Size(145, 30)
         Me.subtotaltxt.TabIndex = 24
+        Me.subtotaltxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'DgvDetalle2
         '
@@ -337,10 +341,11 @@ Partial Class AtencionForm
         Me.Controls.Add(Me.GroupBox6)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(1086, 588)
         Me.Name = "AtencionForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "AtencionForm"
+        Me.Text = "Atenciones"
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Mozo.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
